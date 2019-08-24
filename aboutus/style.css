@@ -1,0 +1,62 @@
+﻿html ,body{
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+
+.navbar{
+	background-color:#1c354a;
+	padding: 1% 0%;
+	font-size: 1.2em;
+	font-style: bold;
+}
+
+.navbar-brand{
+	min-height: 55px;
+	padding: 0 15px 5px;
+
+}
+
+.navbar-default .navbar-nav li a{
+	color : #D5D5D5;
+}
+
+.navbar-default .navbar-nav li a:hover{
+	color : #FFFFFF;
+}
+
+.navbar-default .navbar-nav li a.active{
+	color : yellow;
+}
+
+
+
+
+footer{
+	width: 100%;
+	background-color: #1c354a;
+	padding: 1% 1% 1% 1%;
+	color:white;
+}
+
+.styling{
+	background-color: #d3c3de;
+}
+
+.fa{
+	padding: 15px;
+	font-size: 25px;
+	color: white;
+}
+
+
+.fa:hover{
+	color: #D5D5D5;
+	text-decoration: none;
+}
+
+.icon{
+	max-width: 200px;
+}
+
+
