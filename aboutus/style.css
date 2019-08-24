@@ -1,7 +1,7 @@
 ﻿html ,body{
 	height: 100%;
 	width: 100%;
-	background-color: black;
+	background-color: white;
 }
 
 .navbar{
@@ -29,7 +29,43 @@
 	color : yellow;
 }
 
+.jumbotron h1{
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 70px;
+	letter-spacing: 1px;
+	word-spacing: 0.6px;
+	color: #000000;
+	font-weight: 400;
+	text-decoration: underline solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+} 
 
+.jumbotron p{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 22px;
+	letter-spacing: 1px;
+	word-spacing: 0.6px;
+	color: #000000;
+	font-weight: 400;
+	text-decoration: none; 
+	font-style: italic;
+	font-variant: normal;
+	text-transform: none;
+} 
+#msg1{
+font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 22px;
+letter-spacing: 0.2px;
+word-spacing: 0.6px;
+color: #000000;
+font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
 
 
 footer{
