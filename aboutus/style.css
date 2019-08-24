@@ -55,6 +55,8 @@
 	text-transform: none;
 } 
 
+
+
 #msg1{
 font-family: "Comic Sans MS", cursive, sans-serif;
 font-size: 22px;
@@ -68,8 +70,12 @@ font-variant: normal;
 text-transform: none;
 }
 
+.bcolor{
+	
+background-image: linear-gradient(to right bottom, #918c92, #aaa5ab, #c4bec4, #ded8de, #f9f3f9);}
+
 .info{
-	background-color: #B0B0B0	;
+	background-color: #D8D8D8		;
 }
 
 
