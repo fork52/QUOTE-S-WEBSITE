@@ -46,7 +46,7 @@
 	      <div class="collapse navbar-collapse" id="navbar-collapse-main">
 	        <ul class="nav navbar-nav navbar-right">
 
-	          <li><a  href="../index.html">HOME </a></li>
+	          <li><a  href="../index.php">HOME </a></li>
 	          <li><a href="#">PROFILE </a></li>
 	          <li><a  href="#">AUTHORS </a></li>
 	          <li><a class="active" href="#">REGISTER </a></li>

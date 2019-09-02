@@ -42,7 +42,7 @@
           <li><a class="active" href="#">HOME </a></li>
           <li><a href="#">PROFILE </a></li>
           <li><a  href="#">AUTHORS </a></li>
-          <li><a  href="rgform/regform.html">REGISTER </a></li>
+          <li><a  href="rgform/regform.php">REGISTER </a></li>
           <li><a  href="#">LOGIN </a></li>
           <li><a  href="aboutus/aboutus.html">ABOUT </a></li>
 
