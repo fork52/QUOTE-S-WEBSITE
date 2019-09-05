@@ -195,6 +195,7 @@ button {
     margin-left: 10px;
     -webkit-transform: translateZ(0);
     transform: translateZ(0); }
+    
   button:hover i, button:focus i, button:active i {
     -webkit-animation-name: hvr-icon-wobble-horizontal;
     animation-name: hvr-icon-wobble-horizontal;

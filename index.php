@@ -17,39 +17,39 @@
 <body>
 
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-      <div class="navbar-header">
-        
-        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
-           
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+	  <div class="container-fluid">
+	      <div class="navbar-header">
+	        
+	        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
+	           
+	          <span class="sr-only">Toggle navigation</span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </button>
 
-        <a class="navbar-logo" href="#">
-          <img src="img/logo.png" width="70" height="50">
-        </a>
+	        <a class="navbar-logo" href="#">
+	          <img src="img/logo.png" width="70" height="50">
+	        </a>
 
-      </div>
+	      </div>
 
 
-      <div class="collapse navbar-collapse" id="navbar-collapse-main">
-        <ul class="nav navbar-nav navbar-right">
+	      <div class="collapse navbar-collapse" id="navbar-collapse-main">
+	        <ul class="nav navbar-nav navbar-right">
 
-          <li><a class="active" href="#">HOME </a></li>
-          <li><a href="#">PROFILE </a></li>
-          <li><a  href="#">AUTHORS </a></li>
-          <li><a  href="rgform/regform.php">REGISTER </a></li>
-          <li><a  href="#">LOGIN </a></li>
-          <li><a  href="aboutus/aboutus.html">ABOUT </a></li>
+	          <li><a class="active" href="#">HOME </a></li>
+	          <li><a href="#">PROFILE </a></li>
+	          <li><a  href="#">AUTHORS </a></li>
+	          <li><a  href="rgform/regform.php">REGISTER </a></li>
+	          <li><a  href="#">LOGIN </a></li>
+	          <li><a  href="aboutus/aboutus.html">ABOUT </a></li>
 
-        </ul>
+	        </ul>
 
-      </div>
-  </div>
+	      </div>
+	  </div>
   </nav>
 
 
@@ -58,7 +58,7 @@
       <h1>Quote's Website</h1>
        <h3>A place to share your great ideas and get inspired!</h3>
        <br> <br>
-       <a href="rgform/regform.html"  class="btn btn-default btn-lg">Share your thoughts</a>
+       <a href="rgform/regform.php"  class="btn btn-default btn-lg">Share your thoughts</a>
     </div>  
   </div>
 

@@ -5,15 +5,14 @@
 		<title>RegistrationForm Form</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<!-- MATERIAL DESIGN ICONIC FONT -->
-	<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="css/style.css">
@@ -24,38 +23,38 @@
 
 
 	 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	  <div class="container-fluid">
-	      <div class="navbar-header">
-	        
-	        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
-	           
-	          <span class="sr-only">Toggle navigation</span>
-	          <span class="icon-bar"></span>
-	          <span class="icon-bar"></span>
-	          <span class="icon-bar"></span>
-	          <span class="icon-bar"></span>
-	        </button>
+		  <div class="container-fluid">
+		      <div class="navbar-header">
+		        
+		        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
 
-	        <a class="navbar-logo" href="#">
-	          <img src="../img/logo.png" width="70" height="50">
-	        </a>
-
-	      </div>
+		          <span class="sr-only">Toggle navigation</span>
+		          <span class="icon-bar"></span>
+		          <span class="icon-bar"></span>
+		          <span class="icon-bar"></span>
+		          <span class="icon-bar"></span>
+	       		</button>
 
 
-	      <div class="collapse navbar-collapse" id="navbar-collapse-main">
-	        <ul class="nav navbar-nav navbar-right">
+		        <a class="navbar-logo" href="#">
+		          <img src="../img/logo.png" width="70" height="50">
+		        </a>
 
-	          <li><a  href="../index.php">HOME </a></li>
-	          <li><a href="#">PROFILE </a></li>
-	          <li><a  href="#">AUTHORS </a></li>
-	          <li><a class="active" href="#">REGISTER </a></li>
-	          <li><a  href="#">LOGIN </a></li>
-	          <li><a  href="../aboutus/aboutus.html">ABOUT </a></li>
+		      </div>
 
-	        </ul>
-	      </div>
-	  </div>
+
+		      <div class="collapse navbar-collapse" id="navbar-collapse-main">
+		        <ul class="nav navbar-nav navbar-right">
+		          <li><a  href="../index.php">HOME </a></li>
+		          <li><a href="#">PROFILE </a></li>
+		          <li><a  href="#">AUTHORS </a></li>
+		          <li><a class="active" href="#">REGISTER </a></li>
+		          <li><a  href="#">LOGIN </a></li>
+		          <li><a  href="../aboutus/aboutus.html">ABOUT </a></li>
+		        </ul>
+		      </div>
+
+		  </div>
 	  </nav>
 
 
