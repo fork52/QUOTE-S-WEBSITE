@@ -16,7 +16,7 @@
 
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="css/style.css">
-
+		<link rel="stylesheet" href="formstyle.css">
 	</head>
 
 	<body>
@@ -27,14 +27,12 @@
 		      <div class="navbar-header">
 		        
 		        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
-
 		          <span class="sr-only">Toggle navigation</span>
 		          <span class="icon-bar"></span>
 		          <span class="icon-bar"></span>
 		          <span class="icon-bar"></span>
 		          <span class="icon-bar"></span>
 	       		</button>
-
 
 		        <a class="navbar-logo" href="#">
 		          <img src="../img/logo.png" width="70" height="50">
@@ -63,7 +61,6 @@
 	<div class="NEWFONT">
 		<div class="wrapper" style="background-image: url('images/home.jpg');">
 
-
 			<div class="inner">
 				<div class="image-holder">
 					<img src="images/q3.jpg" alt="" >
@@ -78,7 +75,6 @@
 		
 
 	<br> <br> <br>
-
 		<footer class="container-fluid text-center">
 		  <div class="row">
 		    <div class="col-sm-4">
