@@ -3,7 +3,8 @@
 //VARIABLES FOR STORING DATA 
 $fname=$lname=$uname=$email=$gender=$pass1=$pass2="";
 
-$errormsg="* "; //TO DISPLAY THE ERROR AT THE END OF THE STRING
+$errormsg=""; //TO DISPLAY THE ERROR AT THE END OF THE STRING
+$errorStatus=False;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 				
@@ -11,36 +12,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$lname =$_POST["lname"];
 	$email =$_POST["emailId"];
 	$gender=$_POST["Gender"];
+	$pass1 =$_POST["password1"];
+	$pass2 =$_POST["password2"];
 
-
-	$errormsg= $errormsg.$gender."<br>";
+	// $errormsg= $errormsg."<br><i>*Gender=</i>".$gender;	
 
 	if(!preg_match("/^[a-zA-Z'-]+$/",$fname)){
-			$errormsg= $errormsg."<i>Invalid First Name</i>";
+			$errormsg= $errormsg."<br><i>*Invalid First Name</i>";
+			$errorStatus=True;
 	}
 
-	else if(!preg_match("/^[a-zA-Z'-]+$/",$lname)){
-			$errormsg= $errormsg."<i>Invalid Last Name</i>";
+	if(!preg_match("/^[a-zA-Z'-]+$/",$lname)){
+			$errormsg= $errormsg."<br><i>*Invalid Last Name</i>";
+			$errorStatus=True;
 	}
 
-	else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-			$errormsg= $errormsg."<i>Invalid Email Format</i>";
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			$errormsg= $errormsg."<br><i>*Invalid Email Format</i>";
+			$errorStatus=True;
 	}
 
-	if ($gender="") {
-		$errormsg= $errormsg."<br><i>Invalid Email Format</i>";
+	if (strlen($gender)<2) {
+		$errormsg= $errormsg."<br><i>*Gender not selected.</i>";
+		$errorStatus=True;
 	}
 
+	if($pass1=="" or $pass2==""){
+		$errormsg = $errormsg."<br><i>*Don't leave blank password.</i>";
+		$errorStatus=True;
+	}
+	else if($pass1!=$pass2 and $pass1!=""){
+		$errormsg = $errormsg."<br><i>*Passwords do not match</i>";
+		$errorStatus=True;
+	}
 
-}	
+}	//End of post method
 
+
+// End of p tag
 ?>
 
 		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 					<h3>Registration Page</h3>
 					<div class="form-group">
-						<input type="text" placeholder="First Name" class="form-control" name="fname" 
+						<input id="here" type="text" placeholder="First Name" class="form-control" name="fname" 
 						value="<?php echo $fname;?>">
 
 						<input type="text" placeholder="Last Name" class="form-control" name="lname"  
@@ -59,27 +75,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 					<div class="form-wrapper">
-						<select name="Gender" id="" class="form-control">
-							<option value="" >Gender</option>
-							<option value="male">Male</option>
-							<option value="female">Female</option>
-							<option value="other">Other</option>
+						<select name="Gender" id="" class="form-control ">
+							<option value="">Gender</option>
+
+							<option value="male"
+							<?php if (isset($gender) && $gender=="male") echo "selected";?>>Male</option>
+
+							<option value="female" <?php if (isset($gender) && $gender=="female") echo "selected";?>
+>Female</option>
+							<option value="other" <?php if (isset($gender) && $gender=="other") echo "selected";?>>Other</option>
 						</select>
 
 						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
 					</div>
 					<div class="form-wrapper">
-						<input type="password" placeholder="Password" class="form-control">
+						<input type="password" placeholder="Password" class="form-control"
+						name="password1">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
 					<div class="form-wrapper">
-						<input type="password" placeholder="Confirm Password" class="form-control">
+						<input type="password" placeholder="Confirm Password" class="form-control" name="password2">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
-					<button>Register
-						<i class="zmdi zmdi-arrow-right"></i>
+					<button onClick=”bookmark()” >Register
+					<i class="zmdi zmdi-arrow-right"></i>
 					</button>
 					<br>
 
 					<p id="ER"><?php echo "$errormsg" ?><p>
 				</form>
+
+
+
