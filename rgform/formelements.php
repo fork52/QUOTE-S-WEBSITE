@@ -52,58 +52,93 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 // End of p tag
 ?>
 
-		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-					<h3>Registration Page</h3>
-					<div class="form-group">
-						<input id="here" type="text" placeholder="First Name" class="form-control" name="fname" 
-						value="<?php echo $fname;?>">
+		<h3>Registration Page</h3>
+		<div class="form-group">
+			<!-- First name field-->
+			<input 	 id="here"
+					 type="text" 
+					 placeholder="First Name" 
+					 class="form-control" 
+					 name="fname" 
+					 value="<?php echo $fname;?>"
+			>
+			<!-- Last name field-->
+			<input 	 type="text"
+					 placeholder="Last Name" 
+					 class="form-control" 
+					 name="lname"  
+					 value="<?php echo $lname;?>"
+			>
+		</div>
 
-						<input type="text" placeholder="Last Name" class="form-control" name="lname"  
-						value="<?php echo $lname;?>">
-					</div>
+		<div class="form-wrapper">
+			<!-- Username -->
+			<input  type="text" 
+					placeholder="Username" 
+					class="form-control"
+			>
+			<i class="zmdi zmdi-account"></i>
+		</div>
 
-					<div class="form-wrapper">
-						<input type="text" placeholder="Username" class="form-control">
-						<i class="zmdi zmdi-account"></i>
-					</div>
+		<div class="form-wrapper">
+			<!-- Email Address -->
+			<input 	type="text" 
+					placeholder="Email Address" 
+					class="form-control" name="emailId"  
+					value="<?php echo $email;?>"
+			>
+			<i class="zmdi zmdi-email"></i>
+		</div>
 
-					<div class="form-wrapper">
-						<input type="text" placeholder="Email Address" class="form-control" name="emailId"  value="<?php echo $email;?>">
-						<i class="zmdi zmdi-email"></i>
-					</div>
 
+		<div class="form-wrapper">
+			<!--Gender Select  -->
+			<select name="Gender" id="" class="form-control ">
+				<option value="">Gender</option>
 
-					<div class="form-wrapper">
-						<select name="Gender" id="" class="form-control ">
-							<option value="">Gender</option>
+				<option value="male"<?php if (isset($gender) && $gender=="male") echo "selected";?>>
+				Male
+				</option>
 
-							<option value="male"
-							<?php if (isset($gender) && $gender=="male") echo "selected";?>>Male</option>
+				<option value="female" <?php if (isset($gender) && $gender=="female") echo "selected";?>>Female
+				</option>
 
-							<option value="female" <?php if (isset($gender) && $gender=="female") echo "selected";?>
->Female</option>
-							<option value="other" <?php if (isset($gender) && $gender=="other") echo "selected";?>>Other</option>
-						</select>
+				<option value="other" <?php if (isset($gender) && $gender=="other") echo "selected";?>>Other
+				</option>
 
-						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
-					</div>
-					<div class="form-wrapper">
-						<input type="password" placeholder="Password" class="form-control"
-						name="password1">
-						<i class="zmdi zmdi-lock"></i>
-					</div>
-					<div class="form-wrapper">
-						<input type="password" placeholder="Confirm Password" class="form-control" name="password2">
-						<i class="zmdi zmdi-lock"></i>
-					</div>
-					<button onClick=”bookmark()” >Register
-					<i class="zmdi zmdi-arrow-right"></i>
-					</button>
-					<br>
+			</select>
+			<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+		</div>
 
-					<p id="ER"><?php echo "$errormsg" ?><p>
-				</form>
+		<div class="form-wrapper">
+			<!-- Password -->
+			<input type="password" placeholder="Password" class="form-control"
+			name="password1">
+			<i class="zmdi zmdi-lock"></i>
+		</div>
+
+		<div class="form-wrapper">
+			<!--Confirm Password -->
+			<input 	type="password" 
+					placeholder="Confirm Password" 
+					class="form-control" 
+					name="password2"
+			>
+			<i class="zmdi zmdi-lock"></i>
+		</div>
+
+		<button onClick=”bookmark()” >
+			Register
+			<i class="zmdi zmdi-arrow-right"></i>
+		</button>
+
+		<br>
+		<p id="ER"><?php echo "$errormsg" ?><p> <--ERROR message to be displayed
+
+	</form>
+
 
 
 
