@@ -12,6 +12,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link href="style.css" rel="stylesheet" />
+  <link href="../loginForm/loginStyle.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
@@ -42,15 +45,10 @@
           <li><a href="#">PROFILE </a></li>
           <li><a  href="#">AUTHORS </a></li>
           <li><a  href="../rgform/regform.php">REGISTER </a></li>
-          <li><a  href="#">LOGIN </a></li>
+          <li><a  href="#myModal" data-toggle="modal">LOGIN </a></li>
           <li><a  class="active" href="#">ABOUT </a></li>
 
-
         </ul>
-
-
-
-
       </div>
   </div>
   </nav>
@@ -132,6 +130,8 @@
 
   </div>
 </footer>
+
+<?php include "../loginForm/loginForm.php" ?>
 
 </body>
 </html>

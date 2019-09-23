@@ -1,112 +1,10 @@
-﻿html ,body{
-	height: 100%;
-	width: 100%;
-	background-color: white;
+#t1={
+ color:black;
 }
 
-.navbar{
-	background-color:#1c354a;
-	padding: 1% 0%;
-	font-size: 1.2em;
-	font-style: bold;
+#myFooter{
+  background-color: #16332a;
 }
-
-.navbar-brand{
-	min-height: 55px;
-	padding: 0 15px 5px;
-
-}
-
-.navbar-default .navbar-nav li a{
-	color : #D5D5D5;
-}
-
-.navbar-default .navbar-nav li a:hover{
-	color : #FFFFFF;
-}
-
-.navbar-default .navbar-nav li a.active{
-	color : yellow;
-}
-
-.jumbotron h1{
-	font-family: "Arial Black", Gadget, sans-serif;
-	font-size: 70px;
-	letter-spacing: 1px;
-	word-spacing: 0.6px;
-	color: #000000;
-	font-weight: 400;
-	text-decoration: underline solid rgb(68, 68, 68);
-	font-style: normal;
-	font-variant: normal;
-	text-transform: none;
-} 
-
-.jumbotron p{
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 22px;
-	letter-spacing: 1px;
-	word-spacing: 0.6px;
-	color: #000000;
-	font-weight: 400;
-	text-decoration: none; 
-	font-style: italic;
-	font-variant: normal;
-	text-transform: none;
-} 
-
-
-
-#msg1{
-font-family: "Comic Sans MS", cursive, sans-serif;
-font-size: 22px;
-letter-spacing: 0.2px;
-word-spacing: 0.6px;
-color: #000000;
-font-weight: 700;
-text-decoration: none;
-font-style: normal;
-font-variant: normal;
-text-transform: none;
-}
-
-.bcolor{
-	
-background-image: linear-gradient(to right bottom, #918c92, #aaa5ab, #c4bec4, #ded8de, #f9f3f9);}
-
-.info{
-	background-color: #D8D8D8		;
-}
-
-
-footer{
-	width: 100%;
-	background-color: #1c354a;
-	padding: 1% 1% 1% 1%;
-	color:white;
-}
-
-.styling{
-	background-color: #d3c3de;
-}
-
-.fa{
-	padding: 15px;
-	font-size: 25px;
-	color: white;
-}
-
-
-.fa:hover{
-	color: #D5D5D5;
-	text-decoration: none;
-}
-
-.icon{
-	max-width: 200px;
-}
-
-
 .modal-login {    
     color: #636363;
     width: 350px;
@@ -134,7 +32,7 @@ footer{
     border-radius: 3px; 
   }
   .modal-login .close {
-        position: absolute;
+    position: absolute;
     top: -5px;
     right: -5px;
   } 

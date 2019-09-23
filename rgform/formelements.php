@@ -8,7 +8,7 @@ $errorStatus=False;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 				
-	$fname =$_POST["fname"];
+	$fname =$_POST["fname"];  //Post is a superglobal
 	$lname =$_POST["lname"];
 	$email =$_POST["emailId"];
 	$gender=$_POST["Gender"];
@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	// $errormsg= $errormsg."<br><i>*Gender=</i>".$gender;	
 
+	//Validations
 	if(!preg_match("/^[a-zA-Z'-]+$/",$fname)){
 			$errormsg= $errormsg."<br><i>*Invalid First Name</i>";
 			$errorStatus=True;
@@ -114,8 +115,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 		<div class="form-wrapper">
 			<!-- Password -->
-			<input type="password" placeholder="Password" class="form-control"
-			name="password1">
+			<input  type="password" 
+					placeholder="Password" 
+					class="form-control"
+					name="password1"
+			>
 			<i class="zmdi zmdi-lock"></i>
 		</div>
 
@@ -129,13 +133,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			<i class="zmdi zmdi-lock"></i>
 		</div>
 
-		<button onClick=”bookmark()” >
+		<button onClick=”bookmark()” > 
+			<!--Register button--> 
 			Register
 			<i class="zmdi zmdi-arrow-right"></i>
 		</button>
 
 		<br>
-		<p id="ER"><?php echo "$errormsg" ?><p> <--ERROR message to be displayed
+		<p id="ER"><?php echo "$errormsg" ?><p> <!--ERROR message to be displayed -->
 
 	</form>
 

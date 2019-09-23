@@ -10,6 +10,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link href="style.css" rel="stylesheet" />
+  <link href="loginForm/loginStyle.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -41,8 +43,8 @@
 	          <li><a href="#">PROFILE </a></li>
 	          <li><a  href="#">AUTHORS </a></li>
 	          <li><a  href="rgform/regform.php">REGISTER </a></li>
-	          <li><a  href="#">LOGIN </a></li>
-	          <li><a  href="aboutus/aboutus.html">ABOUT </a></li>
+	          <li><a  href="#myModal" data-toggle="modal">LOGIN </a></li>
+	          <li><a  href="aboutus/aboutus.php">ABOUT </a></li>
 
 	        </ul>
 
@@ -53,11 +55,13 @@
 
   <div id="home">
     <div class="landing-text">
-      <h1>Quote's Website</h1>
-       <h3>A place to share your great ideas and get inspired!</h3>
-       <br> <br>
-       <a href="rgform/regform.php"  class="btn btn-default btn-lg">Share your thoughts</a>
+        <h1>Quote's Website</h1>
+        <h3>A place to share your great ideas and get inspired!</h3>
+        <br> <br>
+        <a href="rgform/regform.php"  class="btn btn-default btn-lg">Share your thoughts</a>
+        
     </div>  
+
   </div>
 
 <br> <br>
@@ -166,6 +170,9 @@
     </div>
   </div>
 </footer>
+
+<?php include "loginForm/loginHome.php" ?>
+
 
 </body>
 </html>

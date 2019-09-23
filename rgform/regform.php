@@ -17,6 +17,8 @@
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="formstyle.css">
+		<link href="../loginForm/loginStyle.css" rel="stylesheet" />
+
 	</head>
 
 	<body>
@@ -47,8 +49,8 @@
 		          <li><a href="#">PROFILE </a></li>
 		          <li><a  href="#">AUTHORS </a></li>
 		          <li><a class="active" href="#">REGISTER </a></li>
-		          <li><a  href="#">LOGIN </a></li>
-		          <li><a  href="../aboutus/aboutus.html">ABOUT </a></li>
+		          <li><a  href="#myModal" data-toggle="modal">LOGIN </a></li>
+		          <li><a  href="../aboutus/aboutus.php">ABOUT </a></li>
 		        </ul>
 		      </div>
 
@@ -65,7 +67,7 @@
 				<div class="image-holder">
 					<img src="images/q3.jpg" alt="" >
 				</div>
-
+				<!-- INCLUDING formelements.php -->
 				<?php
 					include "formelements.php";
 				?>
@@ -99,5 +101,9 @@
 		    </div>
 		  </div>
 		</footer>
+
+		
+		<?php include "../loginForm/loginReg.php" ?>
+
 	</body>
 </html>
