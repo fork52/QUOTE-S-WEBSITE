@@ -1,4 +1,4 @@
-<!-- Modal HTML -->
+<!-- POPUP FORM-->
 <div id="myModal" class="modal fade">
   <div class="modal-dialog modal-login">
     <div class="modal-content">

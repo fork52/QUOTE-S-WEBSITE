@@ -20,13 +20,13 @@
 	  <div class="container-fluid">
 	      <div class="navbar-header">
 	        
-	        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
-	           
-	          <span class="sr-only">Toggle navigation</span>
-	          <span class="icon-bar"></span>
-	          <span class="icon-bar"></span>
-	          <span class="icon-bar"></span>
-	          <span class="icon-bar"></span>
+    	        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
+    	           
+  	          <span class="sr-only">Toggle navigation</span>
+  	          <span class="icon-bar"></span>
+  	          <span class="icon-bar"></span>
+  	          <span class="icon-bar"></span>
+  	          <span class="icon-bar"></span>
 	        </button>
 
 	        <a class="navbar-logo" href="#">
@@ -59,7 +59,6 @@
         <h3>A place to share your great ideas and get inspired!</h3>
         <br> <br>
         <a href="rgform/regform.php"  class="btn btn-default btn-lg">Share your thoughts</a>
-        
     </div>  
 
   </div>
@@ -143,7 +142,6 @@
 </div>
 
 <br> <br>
-
 
 
 <footer class="container-fluid text-center">

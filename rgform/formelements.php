@@ -1,19 +1,22 @@
 <?php 
 
 //VARIABLES FOR STORING DATA 
-$fname=$lname=$uname=$email=$gender=$pass1=$pass2="";
+$fname=$lname=$uname=$email=$gender=$pass1=$pass2=$user_name="";
 
 $errormsg=""; //TO DISPLAY THE ERROR AT THE END OF THE STRING
 $errorStatus=False;
 
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+if (isset($_POST['submit']) and $_SERVER["REQUEST_METHOD"] == "POST"){
+
+	include_once '../includes/db_connect.php';
 				
-	$fname =$_POST["fname"];  //Post is a superglobal
-	$lname =$_POST["lname"];
-	$email =$_POST["emailId"];
-	$gender=$_POST["Gender"];
-	$pass1 =$_POST["password1"];
-	$pass2 =$_POST["password2"];
+	$fname = mysqli_real_escape_string($conn,$_POST["fname"]);  //Post is a superglobal
+	$lname = mysqli_real_escape_string($conn,$_POST["lname"]);
+	$email = mysqli_real_escape_string($conn,$_POST["emailId"]);
+	$gender= mysqli_real_escape_string($conn,$_POST["Gender"]);
+	$pass1 = mysqli_real_escape_string($conn,$_POST["password1"]);
+	$pass2 = mysqli_real_escape_string($conn,$_POST["password2"]);
+	$user_name=mysqli_real_escape_string($conn,$_POST["username"]);
 
 	// $errormsg= $errormsg."<br><i>*Gender=</i>".$gender;	
 
@@ -33,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			$errorStatus=True;
 	}
 
+
 	if (strlen($gender)<2) {
 		$errormsg= $errormsg."<br><i>*Gender not selected.</i>";
 		$errorStatus=True;
@@ -47,10 +51,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$errorStatus=True;
 	}
 
-}	//End of post method
+	$sql_query = "SELECT user_id FROM users WHERE user_name='$user_name';";
+	$result = mysqli_query($conn,$sql_query) ;
+	$resultCheck = mysqli_num_rows($result);
+
+	if($resultCheck>0){
+		$errormsg = $errormsg."<br><i>*Username already taken</i>";
+		$errorStatus=True;
+	}
+	
+	if(strtolower($user_name)=="admin"){
+		$errormsg = $errormsg."<br><i>*Username Not allowed</i>";
+		$errorStatus=True;
+	}
+
+	if($errorStatus==False){
+		//No errors
 
 
-// End of p tag
+		//hashing the password
+		$hashed_pwd = password_hash($pass1, PASSWORD_DEFAULT);
+
+		//Insert the user inside in the database using the query as we are good to go
+		$insert_query = "INSERT INTO users(user_first,user_last,user_email,user_gender,user_name,pwd) VALUES ('$fname','$lname','$email','$gender','$user_name','$hashed_pwd');";
+		mysqli_query($conn,$insert_query);
+
+		//Redirecting the page to home page for now
+		  header("Location:../index.php");
+		  exit();
+
+	}//end of success if
+
+}	//End of post method if
+
+// End of php tag
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -79,6 +113,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			<input  type="text" 
 					placeholder="Username" 
 					class="form-control"
+					name="username"
+					value="<?php echo $user_name;?>"
 			>
 			<i class="zmdi zmdi-account"></i>
 		</div>
@@ -133,7 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			<i class="zmdi zmdi-lock"></i>
 		</div>
 
-		<button onClick=”bookmark()” > 
+		<button type="submit" name="submit" > 
 			<!--Register button--> 
 			Register
 			<i class="zmdi zmdi-arrow-right"></i>
