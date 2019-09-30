@@ -1,3 +1,9 @@
+<?php 
+  if( !isset($_POST["submit1"]) ){
+    $login_error="";
+  }
+?>
+
 <!-- POPUP FORM-->
 <div id="myModal" class="modal fade">
   <div class="modal-dialog modal-login">
@@ -10,21 +16,21 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
       </div>
       <div class="modal-body">
-        <form action="/examples/actions/confirmation.php" method="post">
+        <form action="../includes/loginAction.php" method="post">
           
-            <input type="text" class="form-control" name="username" placeholder="Username" required="required">   
+            <input name="username" type="text"  class="form-control" placeholder="Username" required="required">   
           
        
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required"> 
+            <input name="password" type="password" class="form-control" placeholder="Password" required="required"> 
             
        
-            <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+            <button name="submit" type="submit1" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
         
         </form>
       </div>
 
       <div id="myFooter" class="modal-footer">
-        <a href="#">Forgot Password?</a>
+         <?php echo $login_error; ?>
       </div>
 
     </div>

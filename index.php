@@ -41,7 +41,7 @@
 
 	          <li><a class="active" href="#">HOME </a></li>
 	          <li><a href="#">PROFILE </a></li>
-	          <li><a  href="#">AUTHORS </a></li>
+	          <li><a  href="AUTHORS/aboutauthors.php">AUTHORS </a></li>
 	          <li><a  href="rgform/regform.php">REGISTER </a></li>
 	          <li><a  href="#myModal" data-toggle="modal">LOGIN </a></li>
 	          <li><a  href="aboutus/aboutus.php">ABOUT </a></li>
