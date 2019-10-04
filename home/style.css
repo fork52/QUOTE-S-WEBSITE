@@ -30,7 +30,7 @@
 }
 
 #home{
-	background:  url(img/home.jpg);
+	background: url(home.jpg);
 	display: table;
 	height: 100%;
 	position: relative;
@@ -81,7 +81,7 @@ background-image: linear-gradient(to top, #da7be3, #e49ae9, #ecb8ee, #f3d6f4, #f
 }
 
 #fixed{
-	background: url(img/fixed_img.jpg) no-repeat center center fixed;
+	background: url(fixed_img.jpg) no-repeat center center fixed;
 	display: table;
 	height: 100%;
 	position: relative;

@@ -11,7 +11,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="avatar">
-          <img src="loginForm/user.png" alt="User">
+          <img src="../loginForm/user.png" alt="User">
         </div>     
 
         <h4 class="modal-title">Login</h4> 

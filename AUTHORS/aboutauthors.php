@@ -14,7 +14,7 @@
   <link href="style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body background color="grey">
 
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
@@ -35,21 +35,13 @@
       </div>
 
 
-      <div class="collapse navbar-collapse" id="navbar-collapse-main">
-        <ul class="nav navbar-nav navbar-right">
-
-          <li><a class="active" href="../index.php">HOME </a></li>
-          <li><a href="#">PROFILE </a></li>
-          <li><a  href="aboutauthors/aboutauthors.php">AUTHORS </a></li>
-          <li><a  href="rgform/index.html">REGISTER </a></li>
-          <li><a  href="#">ABOUT </a></li>
+ <?php include "../includes/header_links.php" ?>
 
 
-        </ul>
-
-      </div>
+      
   </div>
   </nav>
+  <br><br>
 
 <div class="jumbotron text-center bcolor">
   <h1>ABOUT THE AUTHORS</h1>
@@ -60,110 +52,57 @@
 <div class="container">
     <div class="row">
 
+      
+
+       <div class="row-sm-2 info"><img src="Mahatma.jpg" class="img-rounded" height="15%" width="20%">
+        
+
+       <div class="row-sm-1"></div>
+
+
+      <div class="row-sm-4 info">
+        <h3>       MAHATMA GANDHI</h3>
+             
+        <p> Mohandas Karamchand Gandhi (2 October 1869 – 30 January 1948) was an Indian lawyer,anti-colonial nationalist,and political ethicist,[5] who employed nonviolent resistance to lead the successful campaign for India's independence from British Rule,and in turn inspire movements for civil rights and freedom across the world.Born and raised in a Hindu family in coastal Gujarat, western India, and trained in law at the Inner Temple, London, Gandhi first employed nonviolent civil disobedience as an expatriate lawyer in South Africa, in the resident Indian community's struggle for civil rights.</p>
+      </div>
+
+    </div>
+  </div>
+<!-- <div class="container">
+    <div class="row">
+
        <div class="col-sm-3info" > 
          
          <img src="Mahatma.jpg" class="img-rounded" height="15%" width="20%">
 
-         <font color="Red" size="12">Mahatma Gandhi</font><br>
+         <font color="Cyan" size="12" style="Georgia" >Mahatma Gandhi</font><br>
 
 
          Mohandas Karamchand Gandhi (2 October 1869 – 30 January 1948) was an Indian lawyer,anti-colonial nationalist,and political ethicist,[5] who employed nonviolent resistance to lead the successful campaign for India's independence from British Rule,and in turn inspire movements for civil rights and freedom across the world.Born and raised in a Hindu family in coastal Gujarat, western India, and trained in law at the Inner Temple, London, Gandhi first employed nonviolent civil disobedience as an expatriate lawyer in South Africa, in the resident Indian community's struggle for civil rights.
          
       </div>
-    </div>
+    </div> -->
 
-<!-- hello -->
 
-<div class="slideshow-container">
+<br><br>
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="img_nature_wide.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+<div id="cp_widget_f71b29bd-1a84-4871-9d38-b97e5e668fd6">...</div><script type="text/javascript">
+
+
+var cpo = []; cpo["_object"] ="cp_widget_f71b29bd-1a84-4871-9d38-b97e5e668fd6"; cpo["_fid"] = "AMOAmnOfJFjm";
+var _cpmp = _cpmp || []; _cpmp.push(cpo);
+(function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+var c = document.getElementsByTagName("script")[0];
+c.parentNode.insertBefore(cp, c); })(); </script><noscript><span>New Gallery 2019/10/4</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 310</span><span>height</span><span> 163</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>height</span><span> 630</span><span>width</span><span> 1200</span><span>orientation</span><span> 1</span><span>camerasoftware</span><span> Adobe Photoshop CC 2</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1066</span><span>height</span><span> 600</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 310</span><span>height</span><span> 163</span></noscript>
 </div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-</div>
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-</body>
+ </body>
 </html> 
 
 
 <br> <br> <br>
 
-<footer class="container-fluid text-center">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Contact us</h3> 
-      <br>
-      <h4>Email us at: random@gmail.com </h4>
-      <h4>Address: afdsgdsg </h4>
-    </div>
+<?php include "../includes/footer.php" ?>
 
-     <div class="col-sm-4">
-      <h3>Connect With</h3>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-google"></a>
-      <a href="#" class="fa fa-linkedin"></a>
-      <a href="#" class="fa fa-instagram"></a>
-    </div>
-
-    <div class="col-sm-4">
-      <img src = "../img/logo.png" class="icon" width="90" height="50">
-    </div>
-
-  </div>
-</footer>
 </body>
 </html>
