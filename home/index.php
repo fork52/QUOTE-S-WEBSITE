@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="../BS/js/jquery.min.js"></script>
   <script src="../BS/js/bootstrap.min.js"></script>
+  
   <link href="style.css" rel="stylesheet" />
 
   <link href="../loginForm/loginStyle.css" rel="stylesheet" />

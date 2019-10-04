@@ -7,12 +7,10 @@
 		
 		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="../BS/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <script src="../BS/js/jquery.min.js"></script>
+	  <script src="../BS/js/bootstrap.min.js"></script>
 
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="css/style.css">
@@ -27,7 +25,7 @@
 	 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		  <div class="container-fluid">
 		      <div class="navbar-header">
-		        
+		       
 		        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
 		          <span class="sr-only">Toggle navigation</span>
 		          <span class="icon-bar"></span>
@@ -41,7 +39,6 @@
 		        </a>
 
 		      </div>
-
 
 <?php include "../includes/header_links.php" ?>
 
@@ -71,7 +68,6 @@
 	<br> <br> <br>
 
 	<?php include "../includes/footer.php" ?>
-
 	<?php include "../loginForm/loginReg.php" ?>
 
 	</body>

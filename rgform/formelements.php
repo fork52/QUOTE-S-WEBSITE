@@ -60,6 +60,15 @@ if (isset($_POST['submit']) and $_SERVER["REQUEST_METHOD"] == "POST"){
 		$errorStatus=True;
 	}
 	
+	$sql_query1 = "SELECT user_email FROM users WHERE user_name='$email';";
+	$result1 = mysqli_query($conn,$sql_query1) ;
+	$resultCheck1 = mysqli_num_rows($result);
+
+	if($resultCheck1>0){
+		$errormsg = $errormsg."<br><i>*One Account already registered on this emailId.</i>";
+		$errorStatus=True;
+	}
+	
 	if(strtolower($user_name)=="admin"){
 		$errormsg = $errormsg."<br><i>*Username Not allowed</i>";
 		$errorStatus=True;
