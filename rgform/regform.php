@@ -4,13 +4,13 @@
 		<meta charset="utf-8">
 		<title>RegistrationForm Form</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
+
 		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
-	  <link rel="stylesheet" href="../BS/css/bootstrap.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	  <script src="../BS/js/jquery.min.js"></script>
-	  <script src="../BS/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../BS/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="../BS/js/jquery.min.js"></script>
+		<script src="../BS/js/bootstrap.min.js"></script>
 
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="css/style.css">
