@@ -3,7 +3,7 @@
 		
 	
 		<li><a  class="link1" href="../home/index.php">HOME </a></li>
-		<li><a  class="link2" href="#">PROFILE </a></li>
+		<li><a  class="link2" href="../Search/search_quotes.php">BROWSE </a></li>
 		<li><a  class="link3" href="../AUTHORS/aboutauthors.php">AUTHORS </a></li>
 		<li><a  class="link4" href="../rgform/regform.php">REGISTER </a></li>
 		<li><a  class="link5" href="#myModal" data-toggle="modal">LOGIN </a></li>
@@ -31,6 +31,11 @@
 		var current_link = header.getElementsByClassName("link6");
 		current_link[0].className+=" active";
 	}
+	else if(filename=="search_quotes.php"){
+		var current_link = header.getElementsByClassName("link2");
+		current_link[0].className+=" active";
+	}
+
 
 	var login_link  = header.getElementsByClassName("link5");
 	login_link[0].addEventListener("click", function() {

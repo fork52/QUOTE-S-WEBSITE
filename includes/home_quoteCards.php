@@ -3,7 +3,7 @@
 
       echo "<div class=\"container\"> ";
       echo "<div class=\"cardWrapper\">";
-      echo "<h1>Quotes</h1>";
+      echo "<center><h1>Quotes</h1>";
       echo "<div class=\"cardCols\">";
 
 
