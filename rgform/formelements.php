@@ -86,7 +86,7 @@ if (isset($_POST['submit']) and $_SERVER["REQUEST_METHOD"] == "POST"){
 		mysqli_query($conn,$insert_query);
 
 		//Redirecting the page to home page for now
-		  header("Location:../index.php");
+		  header("Location:../home/index.php");
 		  exit();
 
 	}//end of success if

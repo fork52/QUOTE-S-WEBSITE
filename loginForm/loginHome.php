@@ -21,7 +21,7 @@
       </div>
 
       <div class="modal-body">
-        <form action="includes/loginAction.php" method="post">
+        <form action="../includes/loginAction.php" method="post">
 
           <div class="form-group">
             <input type="text" class="form-control" name="username" placeholder="Username" required="required">   
