@@ -1,7 +1,7 @@
 ﻿html ,body{
 	height: 100%;
 	width: 100%;
-	background-color: white;
+	background-color: #cdc2ce;
 }
 
 .navbar{
@@ -29,19 +29,23 @@
 	color : yellow;
 }
 
+  @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
+
+.jumbotron{
+  background-image:  url(../img/aboutus_back.jpg);
+
+}
+
+
 .jumbotron h1{
-	/*font-family: "Arial Black", Gadget, sans-serif;
-	font-size: 70px;
-	letter-spacing: 1px;
-	word-spacing: 0.6px;
-	color: #000000;
-	font-weight: 400;
-	text-decoration: underline solid rgb(68, 68, 68);
-	font-style: normal;
-	font-variant: normal;
-	text-transform: none;*/
-  background-image:"url(quotes.jpg)";
-  background-size: cover;
+    font-family: "Bubblegum Sans", cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 71px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    color: rgba(232, 242, 240, 0.64);
+    text-shadow: rgb(0, 0, 0) 2px 2px 20px;
 } 
 
 .jumbotron p{
@@ -49,7 +53,7 @@
 	font-size: 22px;
 	letter-spacing: 1px;
 	word-spacing: 0.6px;
-	color: #000000;
+	color: grey;
 	font-weight: 400;
 	text-decoration: none; 
 	font-style: italic;
@@ -189,4 +193,34 @@ footer{
     display: inline-block;
     margin: 100px auto;
   }
+
+
+.yellowStyle{
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(228, 141, 12);
+    text-shadow: rgb(0, 0, 0) -1px 1px 2px;
+}
+
+
+ @import url('https://fonts.googleapis.com/css?family=Delius+Swash+Caps');
+@import url('https://fonts.googleapis.com/css?family=Amita');
+
+
+
+
+
+.minihead{
+    text-decoration: underline;
+    font-family: "Amita", cursive;
+    text-align: center;
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.94);
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+    background-color: #888c89;
+}
+
 
