@@ -18,6 +18,7 @@
 <body>
 <!-- partial:index.partial.html -->
 
+<?php include "../includes/sessionStarting.php" ?>
 
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="container-fluid">

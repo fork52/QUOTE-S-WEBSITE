@@ -20,6 +20,7 @@
 	</head>
 
 	<body>
+	<?php include "../includes/sessionStarting.php" ?>
 
 
 	 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">

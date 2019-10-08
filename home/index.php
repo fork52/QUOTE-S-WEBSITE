@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +21,7 @@
 </head>
 
 <body>
+<?php include "../includes/sessionStarting.php" ?>
 
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="container-fluid">
@@ -136,9 +139,7 @@
 
  <?php include_once "../includes/home_quoteCards.php" ?>
 
-
 <br> <br>
-
 
 <div id="fixed">
 </div>

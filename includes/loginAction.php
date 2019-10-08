@@ -1,19 +1,19 @@
 <?php 
 	include_once 'db_connect.php';
+	session_start();
+
 
 	$uid = mysqli_real_escape_string($conn,$_POST['username']);
 	$pass1 = mysqli_real_escape_string($conn,$_POST['password']);
 
-	//Check if inputs are empty
 
 	// echo "Here inside login Action.  ".$uid." ".$pass1;
 
-	if(empty($uid) || empty($pass1)){
+	if(empty($uid) || empty($pass1)){ 	//Check if inputs are empty
 		$login_error="Do not leave blank fields!";
 		// echo "<br>Came here";
 	} 
 	else{
-		// echo "<br>Came here";
 		$sql_query2 ="SELECT * FROM users WHERE user_name=?";
 
 		$stmt= mysqli_stmt_init($conn);
@@ -25,7 +25,6 @@
 		else{
 
 			// echo "<br>Statement prepared!";
-
 			mysqli_stmt_bind_param($stmt,"s",$uid);
 			mysqli_stmt_execute($stmt);
 			$result = mysqli_stmt_get_result($stmt);
@@ -36,22 +35,26 @@
 					// echo "<br>Password verification unsuccessful";
 					$login_error="Wrong password";
 					// echo $login_error;
+					$_SESSION['loginMessage']="Wrong password!";
 					header("Location:../home/index.php?error=Wrongpassword");
 					exit();
 				}
 				else if($pwdCheck==True){
 
-					session_start();
 					$_SESSION['user_id']=$row['user_id'];
-					$_SESSION['user_name']=$row['user_name'];
-					header("Location:../home/index.php?login=Success");
+					// $_SESSION['user_name']=$row['user_name'];
+					$_SESSION['user_name']='Mrunank';
+					$_SESSION['loginMessage']="You Registered!";
+					// echo "<br> <script> alert(\"Successfully Registered\"); </script>";
+					header("Location: {$_SERVER["HTTP_REFERER"]}");	
+					// header("Location:../home/index.php?login=Success");
 					exit();
 				}
 			}
 			else{
 				//No username
 				$login_error="Username does not exist";
-				// echo $login_error;
+				$_SESSION['loginMessage']="Username does not exist!";
 				header("Location:../home/index.php?error=usernameNotExists");
 				exit();
 			}
