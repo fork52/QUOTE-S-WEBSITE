@@ -4,7 +4,7 @@
 	
 		<li><a  class="link1" href="../home/index.php">HOME </a></li>
 		<li><a  class="link2" href="../Search/search_quotes.php">BROWSE </a></li>
-		<li><a  class="link3" href="../AUTHORS/aboutauthors.php">AUTHORS </a></li>
+		<li><a  class="link3" href="../authors/authors.php">AUTHORS </a></li>
 		 <?php
 			 if(isset($_SESSION['loginMessage'] )){
 

@@ -1,12 +1,11 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Quote's Website</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../BS/css/bootstrap.min.css">
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:300,400,700'>
   <link rel="stylesheet" href="cardStyle.css">
@@ -42,14 +41,12 @@
 
 	      </div>
 
-<?php include "../includes/header_links.php" ?>
-<?php include "../includes/db_connect.php" ?>
-
-
+  <?php include "../includes/header_links.php" ?>
+  <?php include "../includes/db_connect.php" ?>
 	  </div>
 
   </nav>
-
+  
 
   <div id="home">
     <div class="landing-text">
@@ -58,7 +55,6 @@
         <br> <br>
         <a href="../rgform/regform.php"  class="btn btn-default btn-lg">Share your thoughts</a>
     </div>  
-
   </div>
 
 <br> <br>
