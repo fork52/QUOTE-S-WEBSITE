@@ -4,8 +4,10 @@
   width: 90%;
   max-width: 960px;
   margin: 60px auto;
-  padding: 1rem;
-  background-color: #949087;
+  padding: 2rem 10rem 10rem 10rem;
+  background-color: #84a5db;
+
+
 }
 
 .card{
@@ -14,6 +16,8 @@
   border-radius: 0 0 4px 4px;
   float: left;
   margin-bottom: 12px;
+  box-shadow: 10px 6px 14px 0px rgba(0,0,0,0.75);
+
 }
 
 .clearfix:after,
@@ -30,6 +34,7 @@
   background-repeat: no-repeat;
   height: 0;
   border-radius: 4px 4px 0 0;
+
 }
 
 .top img{
@@ -44,8 +49,9 @@
 
 .bottom{
   padding: 1rem;
-  background: #fff;
+ background: #b7abba;  
   border-radius: 0 0 4px 4px
+
 }
 
 .card-col-1,
@@ -69,6 +75,20 @@
     letter-spacing: 1px;
     word-spacing: 1px;
     color: rgb(0, 0, 0);
-    background-color: rgb(254, 118, 211);
+/*  background-color: rgb(254, 118, 211);*/  
     text-shadow: rgba(0, 0, 0, 0.05) 2px 2px 2px;
+    padding: 20px;
+    background-image: url(../img/pink_texture.jpg);
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+#heading{
+    font-family: "Aref Ruqaa", serif;
+    text-align: center;
+    font-size: 40px;
+    word-spacing: 1px;
+    color: rgb(243, 109, 140);
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+    padding-bottom: 2rem;
 }

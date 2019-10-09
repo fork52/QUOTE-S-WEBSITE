@@ -41,8 +41,13 @@
 		var current_link = header.getElementsByClassName("link6");
 		current_link[0].className+=" active";
 	}
+
 	else if(filename=="search_quotes.php"){
 		var current_link = header.getElementsByClassName("link2");
+		current_link[0].className+=" active";
+	}
+	else if(filename=="authors.php"){
+		var current_link = header.getElementsByClassName("link3");
 		current_link[0].className+=" active";
 	}
 
