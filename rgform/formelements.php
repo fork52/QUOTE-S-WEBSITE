@@ -1,5 +1,24 @@
 <?php 
 
+function valid_pass($candidate) {
+   $r1='/[A-Z]/';  //Uppercase
+   $r2='/[a-z]/';  //lowercase
+   $r3='/[!@#$%^&*()\-_=+{};:,<.>]/';  //specialchars
+   $r4='/[0-9]/';  //numbers
+
+   if(preg_match_all($r1,$candidate)<1) return FALSE;
+
+   if(preg_match_all($r2,$candidate)<1) return FALSE;
+
+   if(preg_match_all($r3,$candidate)<1) return FALSE;
+
+   if(preg_match_all($r4,$candidate)<1) return FALSE;
+
+   if(strlen($candidate)<8) return FALSE;
+
+   return TRUE;
+}
+
 //VARIABLES FOR STORING DATA 
 $fname=$lname=$uname=$email=$gender=$pass1=$pass2=$user_name="";
 
@@ -49,6 +68,10 @@ if (isset($_POST['submit']) and $_SERVER["REQUEST_METHOD"] == "POST"){
 	else if($pass1!=$pass2 and $pass1!=""){
 		$errormsg = $errormsg."<br><i>*Passwords do not match</i>";
 		$errorStatus=True;
+	}	
+	else if(!valid_pass($pass1)){
+		$errormsg = $errormsg."<br><i>*Password is too weak<br>Add atleast one special character,upper and lower case letter and nos.Length should be atleast 8.</i>";
+		$errorStatus=True;
 	}
 
 	$sql_query = "SELECT user_id FROM users WHERE user_name='$user_name';";
@@ -76,8 +99,6 @@ if (isset($_POST['submit']) and $_SERVER["REQUEST_METHOD"] == "POST"){
 
 	if($errorStatus==False){
 		//No errors
-
-
 		//hashing the password
 		$hashed_pwd = password_hash($pass1, PASSWORD_DEFAULT);
 

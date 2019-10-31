@@ -9,6 +9,7 @@
 	    padding: .6em 1.4em .5em .8em;
 	    width: 100%;
 	    max-width: 100%; 
+      outline: none;
 	    box-sizing: border-box;
 	    margin: 0;
 	    border: 1px solid #aaa;
@@ -41,6 +42,9 @@
     font-weight:normal;
 }
 
+*:focus {outline:none}
+
+
 .myButton {
    border-top: 1px solid #ffffff;
    background: #d9d9d9;
@@ -67,8 +71,11 @@
    border-top-color: #e8e1e8;
    background: #e8e1e8;
    color: #030303;
+   outline: none;
    }
 .myButton:active {
    border-top-color: #bdbdbd;
    background: #bdbdbd;
+   outline: none;
 }
+
