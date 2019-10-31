@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,16 +30,29 @@
         <textarea class="form-control" name="quote_area" id="Textarea1" rows="7" placeholder="Enter Quote text"></textarea>
         <br><br><br><br>
         <center><button type="submit" name="submitQuote" class="myButton">Submit</button>
-
 </center>
 
     </div>
   </form>
 
 </div>
+
+<?php 
+  $quoteText="";
+  $errorStatus=False;
+  if (isset($_POST['submitQuote']) and $_SERVER["REQUEST_METHOD"] == "POST"){
+    $quoteText = mysqli_real_escape_string($conn,$_POST["quote_area"]);  //Post is a superglobal
+
+    echo"<h1>Your quote was $quoteText<h1>" ;
+  }
+?>
+
+
 <br><br><br><br><br><br>
 
 
+<!-- <?php echo"<h1>Hello<h1>" ?>
+ -->
 
 
 <?php include "../loginForm/loginHome.php" ;?>
