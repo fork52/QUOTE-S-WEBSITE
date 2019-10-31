@@ -19,7 +19,6 @@
 
 <body>
 <?php include "../includes/sessionStarting.php" ?>
-
 <?php include "../includes/navbar.php" ?>
 
 
@@ -60,12 +59,7 @@
         <div class = "col-lg-3 col-md-3 col-sm-6 col-xs-12">
 
           <h4> Enrich your thoughts </h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Our collection of quotes is unique.Some of the quotes come from our users while the rest are the one we add to our database over time.Some quotes have historical, political or cultural relevance, while others are just for fun. We try our best to keep the language as clean as possible and keep your data secure. We are constantly updating our website and you can expect more content and new amazing features getting added soon.</p>
 
         </div>
 
@@ -75,12 +69,7 @@
 
         <div class = "col-lg-3 col-md-3 col-sm-6 col-xs-12">
            <h4>Share your ideas</h4>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           <p>Our website allow signed up users to log in and then share their own quotes.Those quotes will be displayed on your profile page.Others can view those quotes if they wish to through the browsing features we have provided. We expect you to be creative with your ideas and any posts you make will be gladly welcomed and appreciated.</p>
         </div>
 
         <div class = "col-lg-3 col-md-3 col-sm-6 col-xs-12">
