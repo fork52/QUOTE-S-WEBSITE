@@ -44,9 +44,9 @@
 					$_SESSION['user_id']=$row['user_id'];
 					// $_SESSION['user_name']=$row['user_name'];
 					$_SESSION['user_name']=$row['user_name'];
-					$_SESSION['loginMessage']="You Registered!";
+					$_SESSION['loginMessage']="You logged in!";
 					// echo "<br> <script> alert(\"Successfully Registered\"); </script>";
-					header("Location: {$_SERVER["HTTP_REFERER"]}");	
+					header("Location:../home/index.php");	
 					// header("Location:../home/index.php?login=Success");
 					exit();
 				}

@@ -86,6 +86,9 @@ if (isset($_POST['submit']) and $_SERVER["REQUEST_METHOD"] == "POST"){
 		mysqli_query($conn,$insert_query);
 
 		//Redirecting the page to home page for now
+			$_SESSION['user_name']=$user_name;
+			$_SESSION['loginMessage']="You Registered!";
+			echo "<script>alert('Successfully Registered and logged in!'); </script>";
 		  header("Location:../home/index.php");
 		  exit();
 
