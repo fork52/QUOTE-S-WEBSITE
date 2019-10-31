@@ -1,7 +1,7 @@
 ﻿html ,body{
 	height: 100%;
 	width: 100%;
-	background-color: #cdc2ce;
+	background-color: #efdff0;
 }
 
 .navbar{
@@ -29,36 +29,34 @@
 	color : yellow;
 }
 
-  @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
-
+/*  @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
+*/
 .jumbotron{
-  background-image:  url(../img/aboutus_back.jpg);
-
+background-image: linear-gradient(to bottom, #829ed3, #abb0db, #ccc4e4, #e5daed, #f9f3f9);;
 }
 
 
 .jumbotron h1{
-    font-family: "Bubblegum Sans", cursive;
+    font-family: Verdana, Geneva, sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
     text-align: center;
-    font-size: 71px;
-    letter-spacing: 2px;
-    word-spacing: 4px;
-    color: rgba(232, 242, 240, 0.64);
-    text-shadow: rgb(0, 0, 0) 2px 2px 20px;
+    font-size: 65px;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgba(87, 87, 87, 0.82) 1px 2px 2px;
 } 
 
 .jumbotron p{
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 22px;
-	letter-spacing: 1px;
-	word-spacing: 0.6px;
-	color: grey;
-	font-weight: 400;
-	text-decoration: none; 
-	font-style: italic;
-	font-variant: normal;
-	text-transform: none;
+    font-family: Verdana, Geneva, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #474747;
+    text-shadow: rgba(87, 87, 87, 0.82) 1px 2px 2px;
+	  font-style: italic;
+
 } 
 
 
@@ -81,7 +79,7 @@ text-transform: none;
 background-image: linear-gradient(to right bottom, #918c92, #aaa5ab, #c4bec4, #ded8de, #f9f3f9);}
 
 .info{
-	background-color: #D8D8D8		;
+    background-color: rgb(56, 76, 112);
 }
 
 
@@ -189,6 +187,8 @@ footer{
     background: #45aba6;
     outline: none;
   }
+
+  
   .trigger-btn {
     display: inline-block;
     margin: 100px auto;
@@ -196,31 +196,25 @@ footer{
 
 
 .yellowStyle{
-    font-family: "Delius Swash Caps", cursive;
+    font-family:'verdana';
     font-weight: bold;
     text-align: center;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(228, 141, 12);
-    text-shadow: rgb(0, 0, 0) -1px 1px 2px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: rgb(5, 20, 0);
+    background-color: rgb(222, 212, 202);
 }
-
-
- @import url('https://fonts.googleapis.com/css?family=Delius+Swash+Caps');
-@import url('https://fonts.googleapis.com/css?family=Amita');
-
-
 
 
 
 .minihead{
-    text-decoration: underline;
-    font-family: "Amita", cursive;
+    font-family:'verdana';
     text-align: center;
-    font-size: 35px;
-    color: rgba(0, 0, 0, 0.94);
+    font-size: 37px;
+    letter-spacing: 1px;
+    color: rgb(14, 20, 0);
+    background-color: rgb(178, 176, 252);
     text-shadow: rgb(0, 0, 0) 2px 2px 2px;
-    background-color: #888c89;
 }
 
 

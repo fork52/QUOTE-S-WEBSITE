@@ -19,12 +19,9 @@
 
 <body>
 <?php include "../includes/sessionStarting.php" ?>
-
 <?php include "../includes/navbar.php" ?>
 
-
 <br> <br> <br>
-
 
 <div class="jumbotron text-center" >
   <h1>ABOUT US</h1>
@@ -39,35 +36,32 @@
 
        <div class="col-sm-3 info">
         <h3 class="minihead"><br>A Galore Of Quotes<br><br></h3>
-        <p class="yellowStyle">To serve our users with some of the best & inspiring quotes and also to provide them  significant information about some profilic authors which have faded away with time.        <br> <br>  <br>
+        <p class="yellowStyle"><br><br>To serve our users with some of the best & inspiring quotes and also to provide them  significant information about some profilic authors which have faded away with time. <br> <br>  <br>
         </p>
 
        </div>
 
        <div class="col-sm-1"></div>
 
-
       <div class="col-sm-3 info">
         <h3 class="minihead"><br>User friendly attractive interface<br><br></h3>
-        <p class="yellowStyle">We provide a secure and free interface for uou to browse quotes of your choice.<br>
-        We believe access to the spoken word gives us a unique glimpse into the historic, political and cultural history of the world we share.</p>
+        <p class="yellowStyle"><br><br>We provide a secure and free interface for uou to browse quotes of your choice.We believe access to the spoken word gives us a unique glimpse into the beauty of the world.<br><br></p>
       </div>
 
        <div class="col-sm-1"></div>
 
       <div class="col-sm-4 info">
         <h3 class="minihead"><br>Share your thoughts<br><br></h3>      
-        <p class="yellowStyle">Lorem ipsum dolor sit amet, consectetur adipisicing elit...
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...<br><br><br><br><br><br><br><br></p>
-      </div>
+           <p class="yellowStyle"><br><br><br>Once you have signed in, you can build your profile by adding your won quotes.Registeration is necessary to post your quotes.We make sure the your quotes will be credited to you only.However,you can browse our site without having to sign in.<br><br><br></p>
     </div>
   </div>
+</div>
 
 <br><br>
 <br> <br> <br>
 
-  <?php include "../includes/footer.php" ?>
-  <?php include "../loginForm/loginForm.php" ?>
+<?php include "../includes/footer.php" ?>
+<?php include "../loginForm/loginForm.php" ?>
 
 </body>
 </html>

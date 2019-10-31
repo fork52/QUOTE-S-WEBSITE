@@ -1,8 +1,7 @@
 <footer class="container-fluid text-center">
   <div class="row">
     <div class="col-sm-4">
-      <h3>Contact us</h3> 
-      <br>
+      <h2>Contact us</h3> 
       <h4>EMAIL US AT: mrunankmistry52@gmail.com</h4>
       <h4>ADDRESS:</h4>
     </div>
@@ -19,6 +18,7 @@
 
     <div class="col-sm-4">
       <img src = "../img/logo3.png" class="icon" width="100" height="90">
+      <h4>Quote's Huddle</h4>
     </div>
   </div>
 </footer>
