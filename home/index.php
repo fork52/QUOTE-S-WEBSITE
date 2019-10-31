@@ -13,8 +13,7 @@
   <script src="../BS/js/jquery.min.js"></script>
   <script src="../BS/js/bootstrap.min.js"></script>
   
-  <link href="style.css" rel="stylesheet" />
-
+  <link href="style.css" rel="stylesheet"/>
   <link href="../loginForm/loginStyle.css" rel="stylesheet" />
 
 </head>
@@ -36,7 +35,7 @@
 	        </button>
 
 	        <a class="navbar-logo" href="#">
-	          <img src="../img/logo.png" width="70" height="50">
+	          <img src="../img/logo3.png" width="70" height="50">
 	        </a>
 
 	      </div>
@@ -46,7 +45,7 @@
 	  </div>
 
   </nav>
-  
+
 
   <div id="home">
     <div class="landing-text">

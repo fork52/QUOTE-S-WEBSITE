@@ -1,13 +1,10 @@
 
-
 .cards{
   width: 90%;
   max-width: 960px;
   margin: 60px auto;
-  padding: 2rem 10rem 10rem 10rem;
+  padding: 2rem 5rem 10rem 5rem;
   background-color: #84a5db;
-
-
 }
 
 .card{
@@ -49,16 +46,15 @@
 
 .bottom{
   padding: 1rem;
- background: #b7abba;  
+  background: #b7abba;  
   border-radius: 0 0 4px 4px
-
 }
 
 .card-col-1,
 .card-col-2,
 .card-col-3{
-  width: calc(33.3333333% - 12px);
-  margin: 0 6px;
+  width: calc(33.3333333% - 30px);
+  margin: 0 15px;
   float: left;
 }
 
