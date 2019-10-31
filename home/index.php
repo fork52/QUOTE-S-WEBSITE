@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,35 +20,12 @@
 <body>
 <?php include "../includes/sessionStarting.php" ?>
 
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	  <div class="container-fluid">
-	      <div class="navbar-header">
-	        
-    	        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
-    	           
-  	          <span class="sr-only">Toggle navigation</span>
-  	          <span class="icon-bar"></span>
-  	          <span class="icon-bar"></span>
-  	          <span class="icon-bar"></span>
-  	          <span class="icon-bar"></span>
-	        </button>
-
-	        <a class="navbar-logo" href="#">
-	          <img src="../img/logo3.png" width="70" height="50">
-	        </a>
-
-	      </div>
-
-  <?php include "../includes/header_links.php" ?>
-  <?php include "../includes/db_connect.php" ?>
-	  </div>
-
-  </nav>
+<?php include "../includes/navbar.php" ?>
 
 
   <div id="home">
     <div class="landing-text">
-        <h1>Quote's Website</h1>
+        <h1>Quote's Huddle</h1>
         <h3>A place to share your great ideas and get inspired!</h3>
         <br> <br>
         <a href="../rgform/regform.php"  class="btn btn-default btn-lg">Share your thoughts</a>
@@ -66,29 +42,17 @@
           <img src="../img/aspire.png" width="450" height="300"></div>
 
       <div class="col-sm-6 text-center">
-        <h2> SOME CONTENT</h2>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>WHAT WE OFFER</h2>
+        <p class="lead">Quote's Huddle is a place where you can view and browse for the quotes of your taste as and when required. We have a galore of different quotes to provide written by the best and renowned  authors.Further,we believe that inherent in the quotations lies the essence of the individuals we have quoted; their interests, belief system, comments and ideas are captured in time to benefit our generation and the next.Our quotations database is large and getting bigger every day.We have a treasure trove of historic, political, culturally relevant quotations available on our site</p>
 
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="lead">Our goal is to create a website which will allow people to share their own quotes and build their own profiles in a secure way.We provide a number of browsing facilities as well which enhances the user experience. Our interface is user friendly and pleasing. We believe that a few words can make a huge difference in a person's life.</p>
       </div>
 
 </div>
 </div>
 </div>
 
-
 <br> <br>
-
 
 <div class="padding2">
     <div class="container">

@@ -19,32 +19,8 @@
 <!-- partial:index.partial.html -->
 
 <?php include "../includes/sessionStarting.php" ?>
-
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	  <div class="container-fluid">
-	      <div class="navbar-header">
-	        
-    	        <button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#navbar-collapse-main">
-    	           
-  	          <span class="sr-only">Toggle navigation</span>
-  	          <span class="icon-bar"></span>
-  	          <span class="icon-bar"></span>
-  	          <span class="icon-bar"></span>
-  	          <span class="icon-bar"></span>
-	        </button>
-
-	        <a class="navbar-logo" href="#">
-	          <img src="../img/logo.png" width="70" height="50">
-	        </a>
-
-	      </div>
-
-		<?php include "../includes/header_links.php"; ?>
-		<?php include "../includes/db_connect.php"; ?>
-		<?php $searchword="";  ?>
-
-	  </div>
- </nav>
+<?php include "../includes/navbar.php" ?>
+<?php $searchword=""; ?>
 
 <br> <br> <br> <br> <br> <br> <br>
 <center>

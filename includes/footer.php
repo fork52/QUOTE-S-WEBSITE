@@ -18,7 +18,7 @@
     </div>
 
     <div class="col-sm-4">
-      <img src = "../img/logo.png" class="icon" width="90" height="50">
+      <img src = "../img/logo3.png" class="icon" width="100" height="90">
     </div>
   </div>
 </footer>

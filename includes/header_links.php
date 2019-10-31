@@ -16,7 +16,6 @@
 		<li><a  class="link4" href="../rgform/regform.php">REGISTER </a></li>
 		<li><a  class="link5" href="#myModal" data-toggle="modal">LOGIN </a></li>
 
-
 		<li><a  class="link6" href="../aboutus/aboutus.php">ABOUT </a></li>
 	</ul>
 </div>
