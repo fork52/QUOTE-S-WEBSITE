@@ -15,7 +15,7 @@
   <link href="../loginForm/loginStyle.css" rel="stylesheet" />
 
 
-  <title>Quote's Website</title>
+  <title>Quote's Huddle</title>
 
 
  </head>

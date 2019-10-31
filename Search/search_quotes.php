@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Quote's Website</title>
+  <title>Quote's Huddle</title>
 	  <link rel="stylesheet" href="../BS/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
