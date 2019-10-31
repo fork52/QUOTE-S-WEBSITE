@@ -43,7 +43,7 @@
 
 					$_SESSION['user_id']=$row['user_id'];
 					// $_SESSION['user_name']=$row['user_name'];
-					$_SESSION['user_name']='Mrunank';
+					$_SESSION['user_name']=$row['user_name'];
 					$_SESSION['loginMessage']="You Registered!";
 					// echo "<br> <script> alert(\"Successfully Registered\"); </script>";
 					header("Location: {$_SERVER["HTTP_REFERER"]}");	

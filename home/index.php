@@ -21,7 +21,6 @@
 <?php include "../includes/sessionStarting.php" ?>
 <?php include "../includes/navbar.php" ?>
 
-
   <div id="home">
     <div class="landing-text">
         <h1>Quote's Huddle</h1>
