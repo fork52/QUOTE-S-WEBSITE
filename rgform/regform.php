@@ -21,7 +21,7 @@
 
 	<body>
 	<?php include "../includes/sessionStarting.php" ?>
-	 <?php include "../includes/navbar.php" ?>
+	<?php include "../includes/navbar.php" ?>
 
 
 

@@ -42,8 +42,7 @@
 
 <?php
 			$searchword="";
-			echo "<div class=\"cardWrapper\">";
-			echo "<center><h1>Quotes</h1></center><br>";
+		
 
 			if (isset($_POST["submit_search"]) and $_SERVER["REQUEST_METHOD"] == "POST" ) {
 				$searchword = $_POST["searchbar"];
@@ -68,7 +67,8 @@
 			// 	echo "<center><br><h1>Please enter a keyword</h1></center><br><br><br>";
 			// }
 
-			echo "<div class=\"cardCols\">";
+
+			echo "<div class=\"cardWrapper\">";
 			
 	
 			$result = mysqli_query($conn,$sql_query);
@@ -76,6 +76,9 @@
 			$counter = 501;
 
 			if($resultCheck>0){
+			echo "<center><h1>Quotes</h1></center><br>";
+			echo "<div class=\"cardCols\">";
+
 				// shuffle_assoc($result);
 
 
@@ -110,6 +113,11 @@
 
 					}//while
 			}//if
+			else{
+				echo "<center><h1>No Quotes Available with keyword ".$searchword.".</h1></center>" ;
+				echo "<center><h1>Try another or similar word .</h1></center><br><br>" ;
+
+			}
 			echo "</div> </div>";	
 
 		?>

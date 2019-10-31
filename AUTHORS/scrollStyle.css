@@ -1,5 +1,4 @@
 
-
 .select-css {
 	    display: block;
 	    font-size: 14px;
@@ -42,33 +41,34 @@
     font-weight:normal;
 }
 
-
-
 .myButton {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    padding: 26px 72px;
-    border: 5px solid #383135;
-    border-radius: 39px;
-    background: #680b96;
-    background: -webkit-gradient(linear, left top, left bottom, from(#680b96), to(#e897e8));
-    background: -moz-linear-gradient(top, #680b96, #e897e8);
-    background: linear-gradient(to bottom, #680b96, #e897e8);
-    -webkit-box-shadow: #baa1bd 9px -23px 44px 0px;
-    -moz-box-shadow: #baa1bd 9px -23px 44px 0px;
-    box-shadow: #baa1bd 9px -23px 44px 0px;
-    text-shadow: #591717 1px -1px 1px;
-    font: normal normal bold 20px comic sans ms;
-    color: #331333;
-    text-decoration: none;
-}
-.myButton:hover{
-    border: 5px solid #5a4e55;
-    background: #7d0db4;
-    background: -webkit-gradient(linear, left top, left bottom, from(#7d0db4), to(#ffb5ff));
-    background: -moz-linear-gradient(top, #7d0db4, #ffb5ff);
-    background: linear-gradient(to bottom, #7d0db4, #ffb5ff);
-    color: #331333;
-    text-decoration: none;
+   border-top: 1px solid #ffffff;
+   background: #d9d9d9;
+   background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#d9d9d9));
+   background: -webkit-linear-gradient(top, #fafafa, #d9d9d9);
+   background: -moz-linear-gradient(top, #fafafa, #d9d9d9);
+   background: -ms-linear-gradient(top, #fafafa, #d9d9d9);
+   background: -o-linear-gradient(top, #fafafa, #d9d9d9);
+   padding: 20px 100px;
+   -webkit-border-radius: 26px;
+   -moz-border-radius: 26px;
+   border-radius: 26px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #080408;
+   font-size: 24px;
+   font-family: Verdana;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.myButton:hover {
+   border-top-color: #e8e1e8;
+   background: #e8e1e8;
+   color: #030303;
+   }
+.myButton:active {
+   border-top-color: #bdbdbd;
+   background: #bdbdbd;
 }
