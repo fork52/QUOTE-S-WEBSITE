@@ -78,7 +78,6 @@ if(isset($_SESSION['upload_msg'])){
           $errorStatus=True;
     }
     elseif($errorStatus==False){
-
         $sql_query = "SELECT DISTINCT quote_text FROM `quotes`;";
         $result = mysqli_query($conn,$sql_query) ;
         $resultCheck = mysqli_num_rows($result);
@@ -116,8 +115,6 @@ if(isset($_SESSION['upload_msg'])){
         $spellcheckObject -> CheckGrammar = true;
         $spellcheckObject -> Strict = true;
 
-
-
         $spellcheckObject -> DictionaryPath = ("../phpspellcheck/dictionaries/"); 
         $spellcheckObject -> SuggestionTollerance = 1;
 
@@ -145,7 +142,6 @@ if(isset($_SESSION['upload_msg'])){
 
         foreach($words as $word){
           //Spelling check
-
             $spelledItRight = $spellcheckObject->SpellCheckWord($word);
             if(!$spelledItRight){
               echo "<h1>Please enter correct spelling of words and appropriate words.</h1>";
@@ -156,7 +152,6 @@ if(isset($_SESSION['upload_msg'])){
 
         foreach($words as $word){
           //Check if there are badwords used
-
             $spelledItRight = $spellcheckObject->SpellCheckWord($word);
             if(!$spelledItRight AND  $spellcheckObject->ErrorTypeWord($word)=="B"){
               //B  stands for badword
@@ -165,8 +160,6 @@ if(isset($_SESSION['upload_msg'])){
               break;
             }
         }
-
-
       }
 
     if($errorStatus==False){//SUCCESS IF
