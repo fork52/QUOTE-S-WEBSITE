@@ -49,22 +49,35 @@
 
 <?php
 
+/*
+0 - no error 
+1 - No keyword entered
+2- Incorrect word
+*/
+			$errorStatus=0;
 			$searchword="";
 		
 
-			if (isset($_POST["submit_search"]) and $_SERVER["REQUEST_METHOD"] == "POST" ) {
+			if (isset($_POST["submit_search"]) and $_SERVER["REQUEST_METHOD"] == "POST") {
+				//Word selected
 				$searchword = $_POST["searchbar"];
-				$sql_query = "SELECT DISTINCT quote_text,quote_author FROM quotes WHERE LENGTH(quote_text<=40) AND quote_text LIKE'% ".$searchword." %' ORDER BY RAND() LIMIT 25" ;
-			
-				// echo "<center><h1>Word=".$searchword."</h1></center>";
 
+				if(   strlen(trim($searchword))  >1 ){
+					$errorStatus=0;
+					$sql_query = "SELECT DISTINCT quote_text,quote_author FROM quotes WHERE LENGTH(quote_text<=40) AND quote_text LIKE'% ".$searchword." %' ORDER BY RAND() LIMIT 25" ;
+					// echo "<center><h1>Word=".$searchword."</h1></center>";
+				}
+				else{
+					$errorStatus=1; //there is an error
+				}
 			}
-			 else {
-				$searchword="";
+			else {
+			 	//Default page view and query when no word has been entered
+			 	$errorStatus=0;                     
+				$searchword="";       
 				$flag=0;
 				// echo "<center><h1>Word=".$searchword.".</h1></center>";
 				$sql_query = "SELECT * FROM quotes WHERE LENGTH(quote_text<=27) ORDER BY RAND() LIMIT 5" ;
-			
 			}
 			
 			// if($searchword!="" and $flag==1){
@@ -78,55 +91,63 @@
 
 			echo "<div class=\"cardWrapper\">";
 			
+			if($errorStatus==0){ //No error
 	
-			$result = mysqli_query($conn,$sql_query);
-			$resultCheck = mysqli_num_rows($result);
-			$counter = 501;
+					$result = mysqli_query($conn,$sql_query);
+					$resultCheck = mysqli_num_rows($result);
+					$counter = 501;
 
-			if($resultCheck>0){
-			echo "<center><h1>Quotes</h1></center><br>";
-			echo "<div class=\"cardCols\">";
+					if($resultCheck>0){
+					echo "<center><h1>Quotes</h1></center><br>";
+					echo "<div class=\"cardCols\">";
+						// shuffle_assoc($result);
 
-				// shuffle_assoc($result);
+						while ( $row = mysqli_fetch_assoc($result)) {
 
+							   
+							$quote =$row["quote_text"];
+							$author_name=$row["quote_author"];
+							$url_img_no = $counter;						//Counter var
+							$counter ++;
+							$url_img_no=(string) $url_img_no;
+							$url_img = "https://unsplash.it/".$url_img_no."/".$url_img_no."/";
 
-				while ( $row = mysqli_fetch_assoc($result)) {
+							echo "<div class=\"cardColumn\" ontouchstart=\"this.classList.toggle('hover'); \"> ";
+							echo "<div class=\"cardContainer\"> ";
+							echo "<div class=\"cardFront\" style=\"background-image: url(".$url_img." )\"> ";
+							//Change the url nos
 
-					   
-					$quote =$row["quote_text"];
-					$author_name=$row["quote_author"];
-					$url_img_no = $counter;						//Counter var
-					$counter ++;
-					$url_img_no=(string) $url_img_no;
-					$url_img = "https://unsplash.it/".$url_img_no."/".$url_img_no."/";
+							echo " <div class=\"cardInner\"> ";
+							echo " <p>Quote by</p>";
 
-					echo "<div class=\"cardColumn\" ontouchstart=\"this.classList.toggle('hover'); \"> ";
-					echo "<div class=\"cardContainer\"> ";
-					echo "<div class=\"cardFront\" style=\"background-image: url(".$url_img." )\"> ";
-					//Change the url nos
+							echo "<span>".$author_name."</span>"; 
+							//Change the name of the author	
 
-					echo " <div class=\"cardInner\"> ";
-					echo " <p>Quote by</p>";
+							echo "</div> </div> ";				
+							echo "<div class=\"cardBack\"> ";			
+							echo "<div class=\"cardInner\">";	
+							echo "<p>".$quote."</p> ";	
+							//Change the quote
 
-					echo "<span>".$author_name."</span>"; 
-					//Change the name of the author	
+							echo "</div> </div> </div> </div>";	
 
-					echo "</div> </div> ";				
-					echo "<div class=\"cardBack\"> ";			
-					echo "<div class=\"cardInner\">";	
-					echo "<p>".$quote."</p> ";	
-					//Change the quote
+							}//while
+					}//if
 
-					echo "</div> </div> </div> </div>";	
+				else{
+					//Correct word entered but no quotes found
+						echo "<center><h1>No Quotes Available with keyword ".$searchword.".</h1></center>" ;
+						echo "<center><h1>Try another or similar word .</h1></center><br><br>" ;
+				}
 
-					}//while
-			}//if
-			else{
-				echo "<center><h1>No Quotes Available with keyword ".$searchword.".</h1></center>" ;
-				echo "<center><h1>Try another or similar word .</h1></center><br><br>" ;
+			}//end of errorStatus 0
+			elseif($errorStatus==1){ 
+				echo "<center><h1>Please enter a keyword.</h1></center><br>";
 
 			}
-			echo "</div> </div>";	
+			
+
+			echo "</div> </div>";	//don't touch
 
 		?>
 </div>
