@@ -44,6 +44,8 @@
 					$_SESSION['user_id']=$row['user_id'];
 					// $_SESSION['user_name']=$row['user_name'];
 					$_SESSION['user_name']=$row['user_name'];
+					$_SESSION['user_first']=$row['user_first'];
+					$_SESSION['user_last']=$row['user_last'];
 					$_SESSION['loginMessage']="You logged in!";
 					// echo "<br> <script> alert(\"Successfully Registered\"); </script>";
 					header("Location:../home/index.php");	

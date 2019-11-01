@@ -52,7 +52,7 @@
 
       <div class="col-sm-4 info">
         <h3 class="minihead"><br>Share your thoughts<br><br></h3>      
-           <p class="yellowStyle"><br><br><br>Once you have signed in, you can build your profile by adding your won quotes.Registeration is necessary to post your quotes.We make sure the your quotes will be credited to you only.However,you can browse our site without having to sign in.<br><br><br></p>
+           <p class="yellowStyle"><br><br><br>Once you have signed in, you can build your profile by adding your own quotes.Registeration is necessary to post your quotes.We make sure the your quotes will be credited to you only.However,you can browse our site without having to sign in.<br><br><br></p>
     </div>
   </div>
 </div>

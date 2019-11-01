@@ -225,3 +225,12 @@ footer{
    background: #bdbdbd;
    outline: none;
 }
+
+.errorText h1{
+    font-family:'Verdana';
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: rgb(253, 58, 58);
+}

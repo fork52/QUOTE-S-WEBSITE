@@ -11,7 +11,7 @@
 			 	echo "<li><a class=\"link4\" href=\"../rgform/regform.php\">REGISTER</a></li>";
 			 	echo "<li><a class=\"link5\" href=\"#myModal\" data-toggle=\"modal\">LOGIN</a></li>";
 			}else{
-				echo "<li><a class=\"link8\" href=\"../Upload/upload_Q.php\">UPLOAD</a></li>";
+				echo "<li><a class=\"link8\" href=\"../Upload/upload.php\">UPLOAD</a></li>";
 			}
 		?>		
 
@@ -58,7 +58,7 @@
 		var current_link = header.getElementsByClassName("link3");
 		current_link[0].className+=" active";
 	}
-	else if(filename=="upload_Q.php"){
+	else if(filename=="upload.php"){
 		var current_link = header.getElementsByClassName("link8");
 		current_link[0].className+=" active";
 	}
