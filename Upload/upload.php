@@ -7,7 +7,6 @@ if(isset($_SESSION['upload_msg'])){
   }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +24,6 @@ if(isset($_SESSION['upload_msg'])){
   <link href="../loginForm/loginStyle.css" rel="stylesheet" />
 
 </head>
-
 <body>
 <?php include "../includes/navbar.php" ?>
 
@@ -52,8 +50,6 @@ if(isset($_SESSION['upload_msg'])){
   $mySpell->Fields = "ALL";
   //echo $mySpell->Activate();
 ?>
-
-
 
 
 <div class="container">
@@ -107,7 +103,7 @@ if(isset($_SESSION['upload_msg'])){
         }//if      
     }//elseif
 
-    elseif($errorStatus==False) {
+    if($errorStatus==False) {
         // require "../phpspellcheck/include.php";
 
         $spellcheckObject = new PHPSpellCheck();
@@ -116,23 +112,23 @@ if(isset($_SESSION['upload_msg'])){
 
         $spellcheckObject -> IgnoreAllCaps = false;
         $spellcheckObject -> IgnoreNumeric = false;
-        $mySpell->CheckGrammar = true;
         $spellcheckObject -> CaseSensitive = true;
+        $spellcheckObject -> CheckGrammar = true;
+        $spellcheckObject -> Strict = true;
+
+
 
         $spellcheckObject -> DictionaryPath = ("../phpspellcheck/dictionaries/"); 
         $spellcheckObject -> SuggestionTollerance = 1;
 
         $spellcheckObject -> LoadDictionary("English (International)") ;
         $spellcheckObject -> LoadCustomDictionary("custom.txt");
-
-
-        /*
-
         $spellcheckObject -> LoadCustomBannedWords("language-rules/banned-words.txt"); 
-        /*
-        You can also add banned words from an array which you could easily populate from an SQL query
+
+        
+        // You can also add banned words from an array which you could easily populate from an SQL query
         //$spellcheckObject -> AddBannedWords(array("primary"));
-        */
+        
 
         $spellcheckObject -> LoadEnforcedCorrections("language-rules/enforced-corrections.txt");
         $spellcheckObject -> LoadCommonTypos("language-rules/common-mistakes.txt");
@@ -148,6 +144,7 @@ if(isset($_SESSION['upload_msg'])){
         }
 
         foreach($words as $word){
+          //Spelling check
 
             $spelledItRight = $spellcheckObject->SpellCheckWord($word);
             if(!$spelledItRight){
@@ -156,11 +153,23 @@ if(isset($_SESSION['upload_msg'])){
               break;
             }
         }
+
+        foreach($words as $word){
+          //Check if there are badwords used
+
+            $spelledItRight = $spellcheckObject->SpellCheckWord($word);
+            if(!$spelledItRight AND  $spellcheckObject->ErrorTypeWord($word)=="B"){
+              //B  stands for badword
+              echo "<h1>Bad words Strictly not allowed.</h1>";
+              $errorStatus=True;
+              break;
+            }
+        }
+
+
       }
 
-
-
-    if($errorStatus==False){
+    if($errorStatus==False){//SUCCESS IF
       //No errors
       $author_name=$_SESSION['user_first']." ".$_SESSION['user_last'];
       //Insert the quote inside in the database using the query as we are good to go
@@ -180,8 +189,6 @@ if(isset($_SESSION['upload_msg'])){
 
 
 <br><br><br>
-
-
 
 
 <?php include "../loginForm/loginHome.php" ;?>

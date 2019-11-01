@@ -39,8 +39,16 @@
 <br> <br>
 
 <div class="container">
+<?php
+  require "../phpspellcheck/include.php";
+  $mySpell = new SpellAsYouType();
+  $mySpell->InstallationPath = "../phpspellcheck/";
+  $mySpell->Fields = "TEXTINPUTS";
+  //echo $mySpell->Activate();
+?>
 
 <?php
+
 			$searchword="";
 		
 
