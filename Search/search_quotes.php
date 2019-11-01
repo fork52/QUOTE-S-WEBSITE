@@ -52,7 +52,10 @@
 /*
 0 - no error 
 1 - No keyword entered
-2- Incorrect word
+2 - More than one word
+3 - Incorrect word
+4- Badwords
+5- Special Chars
 */
 			$errorStatus=0;
 			$searchword="";
@@ -61,16 +64,65 @@
 			if (isset($_POST["submit_search"]) and $_SERVER["REQUEST_METHOD"] == "POST") {
 				//Word selected
 				$searchword = $_POST["searchbar"];
+				 $r1='/[!@#$%^*()\/_=+{}<>-\[\]]/';  //specialchars
 
-				if(   strlen(trim($searchword))  >1 ){
-					$errorStatus=0;
-					$sql_query = "SELECT DISTINCT quote_text,quote_author FROM quotes WHERE LENGTH(quote_text<=40) AND quote_text LIKE'% ".$searchword." %' ORDER BY RAND() LIMIT 25" ;
-					// echo "<center><h1>Word=".$searchword."</h1></center>";
+
+
+				if(   strlen(trim($searchword)) >1 ){
+
+					 $words=explode(" ",$searchword);
+
+					 if( count($words) >1 )
+					 	$errorStatus=2;
+					 elseif(preg_match_all($r1,$words[0])>0)
+					 		$errorStatus=5;
+					 else{
+
+				 	        // require "../phpspellcheck/include.php";
+
+					        $spellcheckObject = new PHPSpellCheck();
+
+					        $spellcheckObject -> LicenceKey="TRIAL";
+
+					        $spellcheckObject -> IgnoreAllCaps = false;
+					        $spellcheckObject -> IgnoreNumeric = false;
+					        $spellcheckObject -> CaseSensitive = true;
+					        $spellcheckObject -> CheckGrammar = true;
+					        $spellcheckObject -> Strict = true;
+
+					        $spellcheckObject -> DictionaryPath = ("../phpspellcheck/dictionaries/"); 
+					        $spellcheckObject -> SuggestionTollerance = 1;
+
+					        $spellcheckObject -> LoadDictionary("English (International)") ;
+					        $spellcheckObject -> LoadCustomDictionary("custom.txt");
+					        $spellcheckObject -> LoadCustomBannedWords("language-rules/banned-words.txt"); 
+					  
+					        
+					        $spellcheckObject -> LoadEnforcedCorrections("language-rules/enforced-corrections.txt");
+					        $spellcheckObject -> LoadCommonTypos("language-rules/common-mistakes.txt");
+					        $spelledItRight = $spellcheckObject->SpellCheckWord($words[0]);
+
+				            if(!$spelledItRight AND  $spellcheckObject->ErrorTypeWord($words[0])=="B")
+				              $errorStatus=4;  //Badword         
+				            elseif(!$spelledItRight )
+				              $errorStatus=3; 	//Incorrect word	            	
+				            else{
+				            	//No errors right word
+				            	$errorStatus=0;
+				               	$sql_query = "SELECT DISTINCT quote_text,quote_author FROM quotes WHERE LENGTH(quote_text<=40) AND quote_text LIKE'% ".$searchword." %' ORDER BY RAND() LIMIT 25" ;
+								// echo "<center><h1>Word=".$searchword."</h1></center>";
+
+				            }
+
+					 }
+
+					
 				}
 				else{
-					$errorStatus=1; //there is an error
+					$errorStatus=1; //there are no letter only blankspaces
 				}
 			}
+
 			else {
 			 	//Default page view and query when no word has been entered
 			 	$errorStatus=0;                     
@@ -80,14 +132,6 @@
 				$sql_query = "SELECT * FROM quotes WHERE LENGTH(quote_text<=27) ORDER BY RAND() LIMIT 5" ;
 			}
 			
-			// if($searchword!="" and $flag==1){
-			// 	// $sql_query = "SELECT * FROM quotes WHERE LENGTH(quote_text<=40) AND quote_text LIKE'%".$searchword."%' ORDER BY RAND() LIMIT 25" ;
-			// }
-			// else{
-			// 	$sql_query = "SELECT * FROM quotes WHERE LENGTH(quote_text<=27) ORDER BY RAND() LIMIT 5" ;
-			// 	echo "<center><br><h1>Please enter a keyword</h1></center><br><br><br>";
-			// }
-
 
 			echo "<div class=\"cardWrapper\">";
 			
@@ -139,13 +183,23 @@
 						echo "<center><h1>No Quotes Available with keyword ".$searchword.".</h1></center>" ;
 						echo "<center><h1>Try another or similar word .</h1></center><br><br>" ;
 				}
+			}   //end of errorStatus 0
 
-			}//end of errorStatus 0
 			elseif($errorStatus==1){ 
 				echo "<center><h1>Please enter a keyword.</h1></center><br>";
-
 			}
-			
+			elseif($errorStatus==2){ 
+				echo "<center><h1>Please enter a single keyword.</h1></center><br>";
+			}
+			elseif($errorStatus==3){ 
+				echo "<center><h1>Please enter a correctly spelled keyword.</h1></center><br>";
+			}
+			elseif($errorStatus==4){ 
+				echo "<center><h1>Please don't use badwords.</h1></center><br>";
+			}
+			elseif($errorStatus==5){ 
+				echo "<center><h1>Special charachters not allowed.</h1></center><br>";
+			}
 
 			echo "</div> </div>";	//don't touch
 
