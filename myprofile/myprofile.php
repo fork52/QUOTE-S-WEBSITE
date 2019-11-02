@@ -42,25 +42,25 @@
 	$full_name = $user_first." ".$user_last;
  ?>
 
-    <div class="row profile">
+    <div class="row">
 		<?php
 			echo"<pre><h3> NAME       :".$full_name."</h3></pre>";
 		?>
 	</div>
 
-	<div class="row profile">
+	<div class="row">
 		<?php
 			echo "<pre><h3> USERNAME   :".$user_name."</h3></pre>";
 		?>
 	</div>
 
-    <div class="row profile">
+    <div class="row">
 		<?php
 			echo "<pre><h3> EMAIL      :".$user_email."</h3></pre>";
 		?>
 	</div>
 
-    <div class="row profile">
+    <div class="row">
 		<?php
 			$gender='';
 			if($user_gender=='male')  			$gender = 'Male';
