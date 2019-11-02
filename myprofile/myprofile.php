@@ -45,25 +45,25 @@
 
     <div class="row profile">
 		<?php
-			echo"<pre><h2> NAME       :".$full_name."</h2></pre>";
+			echo"<pre><h3> NAME       :".$full_name."</h3></pre>";
 		?>
 	</div>
 
 	<div class="row profile">
 		<?php
-			echo "<pre><h2> USERNAME   :".$user_name."</h2></pre>";
+			echo "<pre><h3> USERNAME   :".$user_name."</h3></pre>";
 		?>
 	</div>
 
     <div class="row profile">
 		<?php
-			echo "<pre><h2> EMAIL      :".$user_email."</h2></pre>";
+			echo "<pre><h3> EMAIL      :".$user_email."</h3></pre>";
 		?>
 	</div>
 
     <div class="row profile">
 		<?php
-			echo "<pre><h2> GENDER     :". ($user_gender=='mal'? 'Male': 'Female') . "</h2>";
+			echo "<pre><h3> GENDER     :". ($user_gender=='mal'? 'Male': 'Female') . "</h3>";
 		?>
 	</div>
 
