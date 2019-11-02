@@ -26,7 +26,15 @@
         <h1>Quote's Huddle</h1>
         <h3>A place to share your great ideas and get inspired!</h3>
         <br> <br>
-        <a href="../rgform/regform.php"  class="btn btn-default btn-lg">Share your thoughts</a>
+        <a  
+        <?php 
+          if(isset($_SESSION['user_name'] ))
+            echo "href=\"../home/index.php\"";
+          else
+            echo "href=\"../rgform/regform.php\"";
+         ?>  
+          class="btn btn-default btn-lg">
+          Share your thoughts</a>
     </div>  
   </div>
 

@@ -121,12 +121,8 @@ if(isset($_SESSION['upload_msg'])){
         $spellcheckObject -> LoadDictionary("English (International)") ;
         $spellcheckObject -> LoadCustomDictionary("custom.txt");
         $spellcheckObject -> LoadCustomBannedWords("language-rules/banned-words.txt"); 
-
+  
         
-        // You can also add banned words from an array which you could easily populate from an SQL query
-        //$spellcheckObject -> AddBannedWords(array("primary"));
-        
-
         $spellcheckObject -> LoadEnforcedCorrections("language-rules/enforced-corrections.txt");
         $spellcheckObject -> LoadCommonTypos("language-rules/common-mistakes.txt");
 

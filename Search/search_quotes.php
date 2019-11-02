@@ -63,7 +63,8 @@
 
 			if (isset($_POST["submit_search"]) and $_SERVER["REQUEST_METHOD"] == "POST") {
 				//Word selected
-				$searchword = $_POST["searchbar"];
+				$searchword =$_POST["searchbar"];
+				$searchword = strtolower($searchword);
 				 $r1='/[!@#$%^*()\/_=+{}<>-\[\]]/';  //specialchars
 
 
@@ -193,12 +194,19 @@
 			}
 			elseif($errorStatus==3){ 
 				echo "<center><h1>Please enter a correctly spelled keyword.</h1></center><br>";
+
+				if(strlen($words[0]) <10){
+				$didYouMean = implode(" ,",	$spellcheckObject->Suggestions($words[0]) );
+				if(strlen($didYouMean) > 1 AND $didYouMean!='*PHP Spellcheck Trial* ,Please register online ,www.phpspellcheck.com')
+					echo  "<center><h1>Did you mean:".$didYouMean."</h1></center><br>";
+				}
+
 			}
 			elseif($errorStatus==4){ 
 				echo "<center><h1>Please don't use badwords.</h1></center><br>";
 			}
 			elseif($errorStatus==5){ 
-				echo "<center><h1>Special charachters not allowed.</h1></center><br>";
+				echo "<center><h1>Special characters not allowed.</h1></center><br>";
 			}
 
 			echo "</div> </div>";	//don't touch
