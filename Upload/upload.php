@@ -1,11 +1,4 @@
 <?php include "../includes/sessionStarting.php" ?>
-<?php 
-if(isset($_SESSION['upload_msg'])){
-    echo "<script>alert('" . $_SESSION['upload_msg']."'); </script>";
-    //to not make the error message appear again after refresh:
-    unset($_SESSION['upload_msg']);
-  }
-?>
 
 <!DOCTYPE html>
 <html>
@@ -167,11 +160,20 @@ if(isset($_SESSION['upload_msg'])){
 
       //Redirecting the page to home page for now
         $_SESSION['upload_msg']="Quote Uploaded!";
-        header("Location:./upload.php");
+        // header("Location:./upload.php");
 
     }//end of success if
       
   ?>
+
+<?php 
+if(isset($_SESSION['upload_msg'])){
+    echo "<script>alert('" . $_SESSION['upload_msg']."'); </script>";
+    //to not make the error message appear again after refresh:
+    unset($_SESSION['upload_msg']);
+  }
+?>
+
   </div>
 
 </div>
