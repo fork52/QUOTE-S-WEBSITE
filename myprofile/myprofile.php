@@ -33,7 +33,6 @@
 
 
 <?php 
-	$user_id =  $_SESSION['user_id'];
 	$user_name = $_SESSION['user_name'];
 	$user_first= $_SESSION['user_first'];
 	$user_last=$_SESSION['user_last'];
@@ -63,7 +62,12 @@
 
     <div class="row profile">
 		<?php
-			echo "<pre><h3> GENDER     :". ($user_gender=='mal'? 'Male': 'Female') . "</h3>";
+			$gender='';
+			if($user_gender=='male')  			$gender = 'Male';
+			elseif ($user_gender=='female')     $gender = 'Female';
+			elseif ( $user_gender=='other')     $gender = 'Other';
+
+			echo "<pre><h3> GENDER     :". $gender . "</h3>";
 		?>
 	</div>
 

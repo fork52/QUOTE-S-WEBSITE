@@ -108,6 +108,11 @@ if (isset($_POST['submit']) and $_SERVER["REQUEST_METHOD"] == "POST"){
 
 		//Redirecting the page to home page for now
 			$_SESSION['user_name']=$user_name;
+			$_SESSION['user_gender']=$gender;
+			$_SESSION['user_first']=$fname;
+			$_SESSION['user_last']=$lname;
+			$_SESSION['user_email']=$email;
+
 			$_SESSION['loginMessage']="You Registered!";
 			echo "<script>alert('Successfully Registered and logged in!'); </script>";
 		  header("Location:../home/index.php");
