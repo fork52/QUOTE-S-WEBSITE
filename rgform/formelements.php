@@ -1,3 +1,4 @@
+<?php session_start();  ?>
 <?php 
 
 function valid_pass($candidate) {

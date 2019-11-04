@@ -1,4 +1,6 @@
 <?php
+  session_start(); 
+
 
 	//Connecting to a dabase
 	$dbServername = "localhost";
