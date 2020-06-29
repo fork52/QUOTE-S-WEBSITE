@@ -2,13 +2,15 @@
 
 **A website for browsing and uploading quotes. The website is equipped with a galore of quotes.**
 
+
 [![MIT License][license-image]][license-url]
 [![php usage][php-img]][repo-url]
 [![search counter][search_counter_img]][repo-url]
 [![Languages Used][lang-img]][repo-url]
 
 ## Description
-Quotes Huddle is a simple quotes website running on PHP backend and using mySQL as its DBMS. The website has over 5000 quotes. It allows an user to create a new account, explore quotes and share posts as well. The website has a simplistic design and is extremely user-friendly. 
+Quotes Huddle is a simple quotes website running on PHP backend and using mySQL as its DBMS. The website has over 5000 quotes. It allows an user to create a new account, explore quotes and share posts as well. The website has a simplistic design and is extremely user-friendly.
+The website used phpspellcheck for sanitizing the inputs and detecting abusive or offensive quotes if any.
 
 ## License
 The website is licensed under MIT License.
