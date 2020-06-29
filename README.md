@@ -1,5 +1,4 @@
 <h1><a href="https://quoteshuddle.000webhostapp.com/home/" target="_top">Quotes Huddle</a><h1>
-  
 <h3>A website for browsing and posting quotes. The website has a galore of quotes.<h3>
 
 [![MIT License][license-image]][license-url]
