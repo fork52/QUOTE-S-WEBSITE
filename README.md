@@ -9,6 +9,10 @@ A website for browsing and posting quotes. The website has a galore of quotes.
 
 ![Home page](https://github.com/fork52/QUOTES-HUDDLE/blob/master/home.png)
 
+## Website Demo
+<p align="center">
+<img src="https://github.com/fork52/QUOTES-HUDDLE/blob/master/demo.gif">
+</p>
 
 ## Description
 [Quotes Huddle ](https://quoteshuddle.000webhostapp.com/home/ "Quotes Huddle Website") is a simple quotes website running on *PHP backend* and using *mySQL* as its DBMS. The website has over **5000 quotes**. It allows an user to create a new account, explore quotes and share their own quotes as well. The website has a simplistic design and is extremely user-friendly.
