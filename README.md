@@ -1,6 +1,6 @@
 # Quotes Huddle
 
-**A website for browsing and uploading quotes. The website is equipped with a galore of quotes.**
+**A website for browsing and posting quotes. The website has with a galore of quotes.**
 
 
 [![MIT License][license-image]][license-url]
@@ -9,8 +9,8 @@
 [![Languages Used][lang-img]][repo-url]
 
 ## Description
-Quotes Huddle is a simple quotes website running on PHP backend and using mySQL as its DBMS. The website has over 5000 quotes. It allows an user to create a new account, explore quotes and share posts as well. The website has a simplistic design and is extremely user-friendly.
-The website used phpspellcheck for sanitizing the inputs and detecting abusive or offensive quotes if any.
+[Quotes Huddle ](https://quoteshuddle.000webhostapp.com/home/ "Quotes Huddle Website") is a simple quotes website running on *PHP backend* and using *mySQL* as its DBMS. The website has over **5000 quotes**. It allows an user to create a new account, explore quotes and share their own quotes as well. The website has a simplistic design and is extremely user-friendly.
+The website used [phpspellcheck](https://www.phpspellcheck.com/ "phpspellcheck") for sanitizing the inputs and detecting abusive or offensive quotes if any. The website uses [Bootstrap](https://getbootstrap.com/ "Bootstrap") for its frontend and hence has a responsive frontend. 
 
 ## License
 The website is licensed under MIT License.
@@ -23,3 +23,4 @@ The website is licensed under MIT License.
 [php-img]:https://img.shields.io/github/languages/top/fork52/QUOTES-HUDDLE
 [search_counter_img]:https://img.shields.io/github/search/fork52/QUOTES-HUDDLE/Quotes?color=yellow
 [lang-img]:https://img.shields.io/github/languages/count/fork52/QUOTES-HUDDLE?color=Orange&label=Languages
+**
