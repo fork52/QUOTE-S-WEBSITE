@@ -23,4 +23,3 @@ The website is licensed under MIT License.
 [php-img]:https://img.shields.io/github/languages/top/fork52/QUOTES-HUDDLE
 [search_counter_img]:https://img.shields.io/github/search/fork52/QUOTES-HUDDLE/Quotes?color=yellow
 [lang-img]:https://img.shields.io/github/languages/count/fork52/QUOTES-HUDDLE?color=Orange&label=Languages
-**
