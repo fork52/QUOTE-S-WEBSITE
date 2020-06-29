@@ -1,6 +1,6 @@
 # Quotes Huddle
 
-**A website for browsing and posting quotes. The website has with a galore of quotes.**
+**A website for browsing and posting quotes. The website has a galore of quotes.**
 
 
 [![MIT License][license-image]][license-url]
