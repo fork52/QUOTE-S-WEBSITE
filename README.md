@@ -9,4 +9,4 @@ A user friendly Quotes Website
 
 <!-- Markdown link & img dfn's -->
 [license-image]:https://img.shields.io/github/license/fork52/QUOTES-HUDDLE
-[license-url]:
+[license-url]:https://github.com/fork52/QUOTES-HUDDLE/blob/master/LICENSE.txt
