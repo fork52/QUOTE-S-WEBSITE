@@ -10,7 +10,9 @@
 
 ## Description
 [Quotes Huddle ](https://quoteshuddle.000webhostapp.com/home/ "Quotes Huddle Website") is a simple quotes website running on *PHP backend* and using *mySQL* as its DBMS. The website has over **5000 quotes**. It allows an user to create a new account, explore quotes and share their own quotes as well. The website has a simplistic design and is extremely user-friendly.
-The website used [phpspellcheck](https://www.phpspellcheck.com/ "phpspellcheck") for sanitizing the inputs and detecting abusive or offensive quotes if any. The website uses [Bootstrap](https://getbootstrap.com/ "Bootstrap") for its frontend and hence has a responsive frontend. 
+The website uses [phpspellcheck](https://www.phpspellcheck.com/ "phpspellcheck") for sanitizing the quotes and detecting abusive or offensive quotes if any of them are posted by an user. The website uses [Bootstrap](https://getbootstrap.com/ "Bootstrap") for its frontend and hence has a responsive frontend.
+
+Using search filters, user can browse quotes based on his choice.
 
 ## License
 The website is licensed under MIT License.
