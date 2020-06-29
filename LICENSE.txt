@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2019, Mrunank Mistry
+Copyright (c) 2019, Mrunank Mistry, Rucha Desai ,Anuj More, Yash Moily
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

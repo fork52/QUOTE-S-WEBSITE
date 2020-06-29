@@ -1,12 +1,14 @@
-# Quotes Huddle
-
-**A website for browsing and posting quotes. The website has a galore of quotes.**
-
+<h1><a href="https://quoteshuddle.000webhostapp.com/home/" target="_top">Quotes Huddle</a></h1>
+  
+A website for browsing and posting quotes. The website has a galore of quotes.
 
 [![MIT License][license-image]][license-url]
 [![php usage][php-img]][repo-url]
 [![search counter][search_counter_img]][repo-url]
 [![Languages Used][lang-img]][repo-url]
+
+![Home page](https://github.com/fork52/QUOTES-HUDDLE/blob/master/home.png)
+
 
 ## Description
 [Quotes Huddle ](https://quoteshuddle.000webhostapp.com/home/ "Quotes Huddle Website") is a simple quotes website running on *PHP backend* and using *mySQL* as its DBMS. The website has over **5000 quotes**. It allows an user to create a new account, explore quotes and share their own quotes as well. The website has a simplistic design and is extremely user-friendly.
