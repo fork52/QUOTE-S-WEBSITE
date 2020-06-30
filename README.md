@@ -11,7 +11,7 @@ A website for browsing and posting quotes. The website has a galore of quotes.
 
 ## Website Demo
 <p align="center">
-<img src="https://github.com/fork52/QUOTES-HUDDLE/blob/master/demo.gif">
+<img src="https://github.com/fork52/QUOTES-HUDDLE/blob/master/demo.gif" width="70%" height="70%">
 </p>
 
 ## Description
